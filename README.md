@@ -20,21 +20,27 @@
 - [我的博客](https://blog.itjoker.cn)
 
 ## 💡特征
--适当的空白块，优雅但不简单。
+- 适当的空白块，优雅但不简单。
 
--浅色/深色主题，只需单击一下。
+- 浅色/深色主题，只需单击一下。
 
--丰富的高亮模式。
+- 丰富的高亮模式。
 
--精心挑选的字体，最佳阅读体验。 \ * *特别推荐使用“ Microsoft Jhenghei”。
+- 精心挑选的字体，最佳阅读体验。 \ * *特别推荐使用“ Microsoft Jhenghei”。
 
--自动适应移动设备和屏幕。
+- 自动适应移动设备和屏幕。
 
--支持中英文切换
+- 支持中英文切换
 
--支持MathJax，支持用LaTeX编写的公式。
+- 支持MathJax，支持用LaTeX编写的公式。
 
 $$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
+## 📜未来计划
+
+- [ ] 增加live2d
+- [ ] 增加音乐插件
+- [ ] 增加相关的Web特效~
+- More...
 
 ## 🔧安装方法
 
@@ -43,9 +49,7 @@ cd your-blog/themes
 git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
 ```
 
-## 版权归原作者所有，我只是个搬运工~ 当然你喜欢的话可以给个Star✨
+## 如果你喜欢的话可以给个Star✨
 
-## 📃LICENSE
-Chic © [@Sirice](https://github.com/Siricee)
-
+## 📃开源协议
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
