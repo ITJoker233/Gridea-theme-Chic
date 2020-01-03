@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('./include/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+
+<body>
+    <div class="wrapper">
+        <%- include('./include/header') %>
+            <div class="main">
+                <div class="container">
+                    <div class="intro">
+                        <div class="avatar">
+                            <a href="<%= themeConfig.domain %>"><img src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>"></a>
+                        </div>
+                        <div class="nickname">
+                            <%= themeConfig.siteName%>
+                        </div>
+                        <div class="description">
+                            <%= themeConfig.siteDescription%>
+                        </div>
+                        <div class="links">
+                            <% ['rss','twitter', 'facebook', 'github', 'linkedin', 'youtube','instagram','weibo','qq','send'].forEach((item) => { %>
+                                <% if (site.customConfig[item]) { %>
+                                    <a class="link-item" href="<%= site.customConfig[item] %>" title="<%- item %>"><i class="fa fa-<%= item %>"></i></a>
+                                    <% } %>
+                                        <% }); %>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <%- include('./include/footer') %>
+    </div>
+</body>
+
+</html>

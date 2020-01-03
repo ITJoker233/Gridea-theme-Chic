@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('./include/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+
+<body>
+    <div class="wrapper">
+        <%- include('./include/header') %>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                <%= post.title %>
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    <%- themeConfig.siteName %>
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#"><%= post.dateFormat %></a>
+                            </span>
+                                <% if(post.tags.length!==0){ %>
+                                    <span class="post-category">
+                                Category:
+                                <% post.tags.forEach(function(tag) { %>
+                                <a href="<%- tag.link %>"><%- tag.name %></a>
+                                <% }); %>
+                            </span>
+                                    <% } %>
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    <%- themeConfig.siteName %>
+                                </a>
+                                <span class="post-time">
+                                    &#x65E5;&#x671F;: <a href="#"><%= post.dateFormat %></a>
+                            </span>
+                                <% if(post.tags.length!==0){ %>
+                                    <span class="post-category">
+                                        &#x5206;&#x7C7B;:
+                                <% post.tags.forEach(function(tag) { %>
+                                <a href="<%- tag.link %>"><%- tag.name %></a>
+                                <% }); %>
+                            </span>
+                                    <% } %>
+                            </div>
+                        </header>
+
+                        <div class="post-content">
+                            <%- post.content %>
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span><%- themeConfig.siteName %></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="<%- post.link  %>"><%- post.link %></a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>License:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span><%- themeConfig.siteName %></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="<%- post.link  %>"><%- post.link %></a></span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x534F;&#x8BAE;:</span>
+                                <span>MIT License</span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                <% if(post.tags.length!==0){%>
+                                <% post.tags.forEach(item=>{ %>
+                                <a href="<%- item.link %>"># <%- item.name %></a>
+                                <% }) %>
+                                <% } %>
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                <% if(post.tags.length!==0){%>
+                                <% post.tags.forEach(item=>{ %>
+                                <a href="<%- item.link %>"># <%- item.name %></a>
+                                <% }) %>
+                                <% } %>
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                    &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            <% if (post.prevPost && !post.hideInList) { %>
+                                <a class="prev" rel="prev" href="<%= post.prevPost.link %>">
+                                    <%= post.prevPost.title %>
+                                </a>
+                                <% } %>
+                                    <% if (post.nextPost && !post.hideInList) { %>
+                                        <a class="next" rel="next" href="<%= post.nextPost.link %>">
+                                            <%= post.nextPost.title %>
+                                        </a>
+                                        <% } %>
+                        </section>
+
+                    </article>
+                </div>
+                <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+                    <% if (commentSetting.commentPlatform === 'gitalk') { %>
+                        <%- include('./include/gitalk') %>
+                            <% } %>
+                                <% if (commentSetting.commentPlatform === 'disqus') { %>
+                                    <%- include('./include/disqus') %>
+                                        <% } %>
+                                            <% } %>
+            </div>
+    </div>
+    </div>
+
+    </div>
+    <%- include('./include/footer') %>
+        </div>
+</body>
+
+</html>
