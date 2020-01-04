@@ -1,5 +1,5 @@
 
-<h1 align="center"><a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Gridea-theme-Chic</a></h1>
+<h1 align="center"><a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank">Gridea-theme-Chic</a></h1>
 
 <p align="center">
 <img src="https://i.loli.net/2020/01/04/7J4ciEQjwsqK61X.png" alt="Chic theme">
