@@ -131,6 +131,38 @@ document.ready(
                             mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
                     }
                     window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+                    const currentTheme = window.localStorage && window.localStorage.getItem('theme');
+                    var AIimgSrc = [home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_00.png", home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_01.png", ]
+                    var images = [];
+                    var imgLength = AIimgSrc.length;
+                    var loadingNum = 0;
+                    for (var i = 0; i < imgLength; i++) {
+                        images[i] = new Image();
+                        images[i].src = AIimgSrc[i];
+                        images[i].onload = function() {
+                            loadingNum++;
+                            if (loadingNum === imgLength) {
+                                var live2dhidden = localStorage.getItem("live2dhidden");
+                                if (live2dhidden === "0") {
+                                    setTimeout(function() {
+                                        $('#open_live2d').fadeIn(20)
+                                    }, 130)
+                                } else {
+                                    setTimeout(function() {
+                                        $('#landlord').fadeIn(20)
+                                    }, 130)
+                                }
+                                setTimeout(function() {
+                                    if (currentTheme == "dark")
+                                        loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_light.json")
+                                    else {
+                                        loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_dark.json")
+                                    }
+                                }, 100);
+                                images = null
+                            }
+                        }
+                    }
                 })
                 /* zh */
             mobile_toggle_theme_zh.addEventListener('click', () => {
@@ -151,6 +183,38 @@ document.ready(
                         mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
                 }
                 window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+                const currentTheme = window.localStorage && window.localStorage.getItem('theme');
+                var AIimgSrc = [home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_00.png", home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_01.png", ]
+                var images = [];
+                var imgLength = AIimgSrc.length;
+                var loadingNum = 0;
+                for (var i = 0; i < imgLength; i++) {
+                    images[i] = new Image();
+                    images[i].src = AIimgSrc[i];
+                    images[i].onload = function() {
+                        loadingNum++;
+                        if (loadingNum === imgLength) {
+                            var live2dhidden = localStorage.getItem("live2dhidden");
+                            if (live2dhidden === "0") {
+                                setTimeout(function() {
+                                    $('#open_live2d').fadeIn(20)
+                                }, 130)
+                            } else {
+                                setTimeout(function() {
+                                    $('#landlord').fadeIn(20)
+                                }, 130)
+                            }
+                            setTimeout(function() {
+                                if (currentTheme == "dark")
+                                    loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_light.json")
+                                else {
+                                    loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_dark.json")
+                                }
+                            }, 100);
+                            images = null
+                        }
+                    }
+                }
             })
         };
         _Blog.toggleTheme();
