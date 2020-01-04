@@ -34,6 +34,8 @@
 
 - 支持MathJax，支持用LaTeX编写的公式。
 
+- 支持Live 2d
+
 - 友好的SEO
 
 $$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
