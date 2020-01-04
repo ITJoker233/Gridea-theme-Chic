@@ -15,10 +15,10 @@
                             <a href="<%= themeConfig.domain %>"><img src="<%= themeConfig.domain %>/images/avatar.png?v=<%= site.utils.now %>"></a>
                         </div>
                         <div class="nickname">
-                            <%= themeConfig.siteName%>
+                            <%= site.customConfig.author%>
                         </div>
                         <div class="description">
-                            <%= themeConfig.siteDescription%>
+                            <%= site.customConfig.description%>
                         </div>
                         <div class="links">
                             <% ['rss','twitter', 'facebook', 'github', 'linkedin', 'youtube','instagram','weibo','qq','send'].forEach((item) => { %>
