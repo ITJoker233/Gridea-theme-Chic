@@ -2,7 +2,7 @@
 <h1 align="center"><a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Gridea-theme-Chic</a></h1>
 
 <p align="center">
-<img src="https://i.loli.net/2019/06/12/5d006bd289aa325037.png" alt="Chic theme">
+<img src="https://i.loli.net/2020/01/04/7J4ciEQjwsqK61X.png" alt="Chic theme">
 </p>
 
 > Chic , 在法语中的意思是别致...
