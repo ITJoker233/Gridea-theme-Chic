@@ -1,4 +1,3 @@
-// declaraction of document.ready() function.
 (function() {
     var ie = !!(window.attachEvent && !window.opera);
     var wk = /webkit\/(\d+)/i.test(navigator.userAgent) && (RegExp.$1 < 525);
@@ -77,8 +76,40 @@ document.ready(
                     } else {
                         document.getElementsByTagName('body')[0].classList.add('dark-theme');
                     }
-                    window.localStorage &&
-                        window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+                    window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+                    const currentTheme = window.localStorage && window.localStorage.getItem('theme');
+                    var AIimgSrc = [home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_00.png", home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_01.png", ]
+                    var images = [];
+                    var imgLength = AIimgSrc.length;
+                    var loadingNum = 0;
+                    for (var i = 0; i < imgLength; i++) {
+                        images[i] = new Image();
+                        images[i].src = AIimgSrc[i];
+                        images[i].onload = function() {
+                            loadingNum++;
+                            if (loadingNum === imgLength) {
+                                var live2dhidden = localStorage.getItem("live2dhidden");
+                                if (live2dhidden === "0") {
+                                    setTimeout(function() {
+                                        $('#open_live2d').fadeIn(20)
+                                    }, 130)
+                                } else {
+                                    setTimeout(function() {
+                                        $('#landlord').fadeIn(20)
+                                    }, 130)
+                                }
+                                setTimeout(function() {
+                                    if (currentTheme == "dark")
+                                        loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_light.json")
+                                    else {
+                                        loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_dark.json")
+                                    }
+                                }, 100);
+                                images = null
+                            }
+                        }
+                    }
+
                 })
                 // moblie
                 /* en */
@@ -86,10 +117,11 @@ document.ready(
                     if (document.getElementsByTagName('body')[0].classList.contains('dark-theme')) {
                         document.getElementsByTagName('body')[0].classList.remove('dark-theme');
                         // mobile
-                        if (mobile_toggle_theme_en_display == "inline")
+                        if (mobile_toggle_theme_en_display == "inline") {
                             mobile_toggle_theme_en.innerText = "·Light";
-                        else
+                        } else {
                             mobile_toggle_theme_zh.innerText = "·\u65E5\u95F4";
+                        }
                     } else {
                         document.getElementsByTagName('body')[0].classList.add('dark-theme');
                         // mobile
@@ -98,8 +130,7 @@ document.ready(
                         else
                             mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
                     }
-                    window.localStorage &&
-                        window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+                    window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
                 })
                 /* zh */
             mobile_toggle_theme_zh.addEventListener('click', () => {
@@ -119,8 +150,7 @@ document.ready(
                     else
                         mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
                 }
-                window.localStorage &&
-                    window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+                window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
             })
         };
         _Blog.toggleTheme();

@@ -1,0 +1,19 @@
+#landlord {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+
+#live2d {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width: 860px) {
+    #live2d {
+        width: 100px;
+        height: 100px;
+    }
+}
