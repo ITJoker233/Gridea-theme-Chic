@@ -1,30 +1,11 @@
 <footer id="footer" class="footer">
     <div class="copyright">
         <%- themeConfig.footerInfo %>
-
-            <script>
-                var xhr = new XMLHttpRequest();
-                xhr.open('get', 'https://v1.hitokoto.cn');
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4) {
-                        var data = JSON.parse(xhr.responseText);
-                        var hitokoto = document.getElementById('hitokoto');
-                        hitokoto.innerText = data.hitokoto;
-                    }
-                }
-                xhr.send();
-                (function() {
-                    var bp = document.createElement('script');
-                    var curProtocol = window.location.protocol.split(':')[0];
-                    if (curProtocol === 'https') {
-                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                    } else {
-                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                    }
-                    var s = document.getElementsByTagName("script")[0];
-                    s.parentNode.insertBefore(bp, s);
-                })();
-            </script>
+            <div class="Like">
+                <div class="tip" data-tooltip="Do you like it?">
+                    <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon" aria-hidden="true"><use xlink:href="#like"></use></svg><b class="like_text" id="star"></b></a>
+                </div>
+            </div>
             <b id="hitokoto"></b><br>
             <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face"><path d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z" fill="#93b5cf"></path></svg>
             <script>
@@ -33,11 +14,55 @@
                 /*document.write(" " + date.getFullYear() + "Year" + (date.getMonth() + 1) + "月" + date.getDate() + "Day" + " 星期" + "日一二三四五六".charAt(date.getDay()));*/
             </script> Copyright&copy;
             <%= themeConfig.siteName%> | Powered by <a href="https://coding.net" target="_blank">Coding.net</a>
-
     </div>
 </footer>
 <script>
+    function hitokoto() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'https://v1.hitokoto.cn');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                var data = JSON.parse(xhr.responseText);
+                var hitokoto = document.getElementById('hitokoto');
+                hitokoto.innerText = data.hitokoto;
+            }
+        }
+        xhr.send();
+    }
+    hitokoto();
+    (function() {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
     hljs.initHighlighting();
+    var star = document.getElementById("star");
+    var star_count = 0;
+    var url = "https://api.github.com/users/ITJoker233/repos?page=";
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', url);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            var data = JSON.parse(xhr.responseText);
+            for (var i = 0; i < data.length; i++) {
+                if (data[i]['name'] == "Gridea-theme-Chic") {
+                    star_count = data[i]['stargazers_count'];
+                    for (var j = 0; j < parseInt(star_count) + 1; j++) {
+                        setTimeout(star.innerHTML = j.toString(), 500);
+                    }
+                    break;
+                }
+            }
+        }
+    }
+    xhr.send();
+
     console.log(
         "\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n",
         "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;",

@@ -1,3 +1,90 @@
+@charset "UTF-8";
+
+.Like { 
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+    left: -1%;
+    cursor: pointer;
+    color:rgba(89, 99, 105, 1);
+    position: relative;min-height:100%;background-size:cover;
+}
+.Like:hover {
+    color: #fff;
+    font-size: 22px;
+    border-radius: 2px;
+}
+
+.Like>div {
+    background: rgba(1, 1, 1, 0.2);
+    min-width: 50px;
+    height: 24px;
+    border-radius: 4px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.Like>div svg {
+    width: 28px;
+    height: 28px;
+}
+
+.Like>div a {
+    font-weight: bold;
+    text-align: center;
+    padding-right: 4px;
+    padding-left: 2px;
+    align-items: center;
+    font-size: 18px;
+}
+
+.like_text {
+    position: absolute;
+    top: 5px;
+}
+
+@media screen and (max-width: 780px) {
+    .Like {
+        position: fixed;
+        left: -50%;
+        bottom: 25px;
+    }
+}
+.tip::after {
+    background: rgba(79, 89, 95, 0.4);
+    border-radius: 2px;
+    bottom: 100%;
+    color: #fff;
+    content: attr(data-tooltip);
+    display: block;
+    font-size: .7rem;
+    left: 98%;
+    max-width: 320px;
+    opacity: 0;
+    overflow: hidden;
+    font-weight: lighter;
+    padding: 2px 5px;
+    line-height: 20px;
+    pointer-events: none;
+    position: absolute;
+    text-overflow: ellipsis;
+    transform: translate(-50%, .4rem);
+    transition: opacity .2s, transform .2s;
+    white-space: pre;
+    z-index: 30;
+}
+
+.tip:focus::after,
+.tip:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -.2rem)
+}
+
 .en {}
 
 .zh {}
