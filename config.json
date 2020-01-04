@@ -1,6 +1,6 @@
 {
-    "name": "Chic",
-    "version": "1.1",
+    "name": "Chic-dev",
+    "version": "1.2",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -20,14 +20,29 @@
             ]
         },
         {
-            "name": "gxmz",
+            "name": "author",
             "label": "博主名字",
-            "group": "名片",
+            "group": "网站信息",
             "value": "",
             "type": "input",
             "note": "请输入博主名字"
         },
-
+        {
+            "name": "keywords",
+            "label": "关键字",
+            "group": "网站信息",
+            "value": "",
+            "type": "input",
+            "note": "请输入关键字(多个请用英文的,分开)"
+        },
+        {
+            "name": "description",
+            "label": "描述",
+            "group": "网站信息",
+            "value": "",
+            "type": "input",
+            "note": "请输入描述"
+        },
         {
             "name": "rss",
             "label": "rss",
