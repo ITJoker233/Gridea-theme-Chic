@@ -34,6 +34,8 @@
 
 - 支持MathJax，支持用LaTeX编写的公式。
 
+- 友好的SEO
+
 $$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
 ## 📜未来计划
 
@@ -42,12 +44,17 @@ $$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
 - [ ] 增加相关的Web特效~
 - More...
 
+## 📌当前版本：1.2
+
+- 优化了SEO，删除了不必要的东西...
+
 ## 🔧安装方法
 
 ```bash
 cd your-blog/themes
 git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
 ```
+- <font color='red'>需要在主题的设置里面的自定义设置中设置好网站信息，否则会有可能报错</font>
 
 ## 如果你喜欢的话可以给个Star✨
 
