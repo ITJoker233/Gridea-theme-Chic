@@ -21,11 +21,14 @@
         },
         {
             "name": "version",
-            "label": "",
+            "label": "主题版本",
             "group": "网站信息",
             "value": "1.4.3",
-            "type": "label",
-            "note": ""
+            "type": "select",
+            "options": [{
+                "label": "最新版本",
+                "value": "1.4.3"
+            }]
         },
         {
             "name": "author",
