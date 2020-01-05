@@ -8,7 +8,7 @@
 > Chic , 在法语中的意思是别致...
 
 <p align="center">
-<img alt="作者:Sirice，二次修改：ITJoker" src="#"/>
+<img alt="作者:Sirice，二次修改：ITJoker" src="https://github.com/ITJoker233/Gridea-theme-Chic"/>
 </p>
 
 
