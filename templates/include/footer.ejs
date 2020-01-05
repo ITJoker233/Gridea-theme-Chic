@@ -108,7 +108,32 @@
     });
 </script>
 <script type="text/javascript" src="<%= themeConfig.domain %>/media/live2d/js/live2d.js"></script>
+<div id="version" style="display: none;">
+    <%= site.customConfig.version %>
+</div>
 <script>
     console.clear();
+
+    function CheckVersion() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'https://api.github.com/repos/ITJoker233/Gridea-theme-Chic/releases/latest');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                var data = JSON.parse(xhr.responseText);
+                var version = "<%=site.customConfig.version%>"; //document.getElementById('version').innerText;
+                var hitokoto = document.getElementById('hitokoto');
+                if (version == "") {
+                    hitokoto.innerText = "因为新版本特性,请重新点击下主题->自定义配置->保存";
+                }
+                if (data.tag_name != version) {
+                    console.log("🎉Current Theme Version: " + version);
+                    hitokoto.innerText = "请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
+                } else
+                    console.log("\n%c🎉Latest Version: " + data.tag_name + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+            }
+        }
+        xhr.send();
+    }
+    CheckVersion();
     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
 </script>
