@@ -1,6 +1,6 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -23,12 +23,44 @@
             "name": "version",
             "label": "主题版本",
             "group": "网站信息",
-            "value": "1.4.3",
+            "value": "1.4.4",
             "type": "select",
             "options": [{
                 "label": "最新版本",
-                "value": "1.4.3"
+                "value": "1.4.4"
             }]
+        },
+        {
+            "name": "live2ddebug",
+            "label": "是否本地预览(同步时请关闭)",
+            "group": "Live2d",
+            "value": "off",
+            "type": "select",
+            "options": [{
+                    "label": "关",
+                    "value": "off"
+                },
+                {
+                    "label": "开",
+                    "value": "on"
+                }
+            ]
+        },
+        {
+            "name": "live2d",
+            "label": "Live2d开启状态",
+            "group": "Live2d",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
         },
         {
             "name": "author",
