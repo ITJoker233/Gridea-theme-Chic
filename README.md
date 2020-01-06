@@ -1,16 +1,13 @@
 
 <h1 align="center"><a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank">Gridea-theme-Chic</a></h1>
-
 <p align="center">
 <img src="https://i.loli.net/2020/01/04/7J4ciEQjwsqK61X.png" alt="Chic theme">
 </p>
 
 > Chic , 在法语中的意思是别致...
-
 <p align="center">
 <img alt="作者:Sirice，二次修改：ITJoker" src="https://github.com/ITJoker233/Gridea-theme-Chic"/>
 </p>
-
 
 ## 🎈介绍
 优雅，功能强大，易于阅读的Gridea主题。
@@ -58,6 +55,10 @@ $$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$
 3. 增加了是否提醒更新功能
 4. 修复了1.4.5的小Bug
 5. 修复了1.4.6的script.js的Bug
+
+## 📢作者留言
+
+- 年底期间可能更新较慢或者不更新，如有Bug之类或者需求，请在[我的博客](https://blog.itjoker.cn/post/about/)留言或者提交Issue :)
 
 ## 🔧安装方法
 
