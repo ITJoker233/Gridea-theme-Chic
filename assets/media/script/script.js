@@ -70,15 +70,21 @@ function CheckVersion() {
         if (xhr.readyState === 4) {
             var data = JSON.parse(xhr.responseText);
             var version = document.getElementById('version').innerText;
+            var update = document.getElementById('update').innerText;
             var hitokoto = document.getElementById('hitokoto');
-            if (version == "") {
-                hitokoto.innerText = "因为新版本特性,请重新点击下主题->自定义配置->保存 或参考最新的README.md\n" + data.body;
-            }
-            if (data.tag_name != version) {
+            if (update == "on") {
+                if (version == "") {
+                    hitokoto.innerText = "因为新版本特性,请重新点击下主题->自定义配置->保存 或参考最新的README.md";
+                }
+                if (data.tag_name != version) {
+                    console.log("🎉Current Theme Version: " + version);
+                    hitokoto.innerText = "请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
+                } else
+                    console.log("\n %c🎉Latest Version: " + data.tag_name + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+            } else if (data.body = "重要更新") {
                 console.log("🎉Current Theme Version: " + version);
-                hitokoto.innerText = "请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
-            } else
-                console.log("\n %c🎉Latest Version: " + data.tag_name + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+                hitokoto.innerText = "有重大更新，请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
+            }
         }
     }
     xhr.send();
