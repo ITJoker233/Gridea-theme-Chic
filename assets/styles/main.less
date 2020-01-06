@@ -47,13 +47,6 @@
     position: absolute;
     top: 5px;
 }
-
-@media screen and (max-width: 780px) {
-    .Like {
-        left: -80%;
-        bottom: 15px;
-    }
-}
 .tip::after {
     background: rgba(79, 89, 95, 0.4);
     border-radius: 2px;
@@ -100,6 +93,29 @@
       line-height: 24px;
     }
   }
+  @media screen and (max-width: 780px) {
+    .Like {
+        left: -80%;
+        bottom: 15px;
+    }
+    .friend-box {
+        float: left;
+        width: calc(50% - 20px);
+        margin: 15px 10px;
+        img.friend-avatar{
+          width: 35px;
+          height: 35px;
+          border-radius: 50% !important;
+          float: left;
+          margin:0 15px 0 0 !important;
+        }
+        .flink-info{
+          height:70px;
+          overflow: hidden;
+          line-height: 24px;
+        }
+      }
+}
 .en {}
 
 .zh {}
