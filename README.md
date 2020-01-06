@@ -67,7 +67,7 @@ git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
 ```
 - <font color='red'>需要在主题的设置里面的自定义设置中设置好网站信息，否则会有可能报错</font>
 
-## 如果你喜欢的话可以给个Star✨,<font color='red'>如果你想赞助的话，可以联系作者~2333</font>
+## 如果你喜欢的话可以给个Star✨,<font color='red'>如果你想赞助的话，可以联系作者~2333 联系方式在博客~</font>
 
 ## 📃开源协议
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
