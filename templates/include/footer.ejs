@@ -21,6 +21,9 @@
                         </script>
                         | Powered by <a href="https://coding.net" target="_blank">Coding.net</a>
             </div>
+            <div id="version">
+                <%= site.customConfig.version%>
+            </div>
         </footer>
         <% if (site.customConfig.live2d == "on") { %>
             <script type="text/javascript" src="<%= themeConfig.domain %>/media/live2d/js/live2d.js"></script>

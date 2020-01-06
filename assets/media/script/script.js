@@ -69,7 +69,7 @@ function CheckVersion() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             var data = JSON.parse(xhr.responseText);
-            var version = "<%=site.customConfig.version%>";
+            var version = document.getElementById('version').innerText;
             var hitokoto = document.getElementById('hitokoto');
             if (version == "") {
                 hitokoto.innerText = "因为新版本特性,请重新点击下主题->自定义配置->保存 或参考最新的README.md\n" + data.body;
