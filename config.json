@@ -1,6 +1,6 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -60,11 +60,11 @@
             "name": "version",
             "label": "主题版本",
             "group": "网站信息",
-            "value": "1.5.0",
+            "value": "1.5.1",
             "type": "select",
             "options": [{
                 "label": "最新版本",
-                "value": "1.5.0"
+                "value": "1.5.1"
             }]
         },
         {
@@ -115,6 +115,60 @@
                     "value": "off"
                 }
             ]
+        },
+        {
+            "name": "music_switch",
+            "label": "Music插件",
+            "group": "Music插件",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "music_tips",
+            "label": "详细教程见:https://blog.itjoker.cn/post/azQ6rNbFG/",
+            "group": "Music插件",
+            "type": "label"
+        },
+        {
+            "name": "music_url",
+            "label": "歌曲的url地址",
+            "group": "Music插件",
+            "value": "",
+            "type": "input",
+            "note": "请输入歌曲的url地址"
+        },
+        {
+            "name": "music_pic",
+            "label": "歌曲的图片地址",
+            "group": "Music插件",
+            "value": "",
+            "type": "input",
+            "note": "请输入歌曲的图片地址"
+        },
+        {
+            "name": "music_name",
+            "label": "歌曲名",
+            "group": "Music插件",
+            "value": "",
+            "type": "input",
+            "note": "请输入歌曲名"
+        },
+        {
+            "name": "music_author",
+            "label": "歌曲的作者名",
+            "group": "Music插件",
+            "value": "",
+            "type": "input",
+            "note": "请输入歌曲的作者名"
         },
         {
             "name": "author",
@@ -235,6 +289,22 @@
             "value": "",
             "type": "input",
             "note": "UA-xxxxxxxxx-x"
+        },
+        {
+            "name": "baidu",
+            "label": "百度自动提交",
+            "group": "百度自动提交",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
         }
     ]
 }

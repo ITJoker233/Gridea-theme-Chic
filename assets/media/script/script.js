@@ -81,7 +81,7 @@ function CheckVersion() {
                     console.log("🎉Current Theme Version: " + version);
                     hitokoto.innerText = "请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
                 } else
-                    console.log("\n %c🎉Latest Version: " + data.tag_name + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+                    console.log("\n %c 🎉 Current Theme Version: " + version + " Latest Version: " + data.tag_name + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
             } else if ((update == "off") && patt.test(data.body)) {
                 console.log("🎉Current Theme Version: " + version);
                 hitokoto.innerText = "有重大更新，请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
