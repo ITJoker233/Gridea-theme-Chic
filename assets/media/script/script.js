@@ -41,7 +41,7 @@ function hitokoto() {
 }
 
 function loadlive2d() {
-    const home_Path = document.getElementById('home_path').innerHTML + '/media/live2d/tororo/assets/tororo.model_light.json';
+    const home_Path = document.getElementById('home_path').innerHTML + '/media/live2d/tororo/assets/tororo.model_';
     const currentTheme = window.localStorage && window.localStorage.getItem('theme');
     const superSample_ = 1.5;
     const opacityDefault_ = 0.8;
@@ -57,7 +57,7 @@ function loadlive2d() {
     if (currentTheme == "dark")
         L2Dwidget.init({
             model: {
-                jsonPath: home_Path,
+                jsonPath: home_Path + `light.json`,
             },
             display: {
                 superSample: superSample_,
@@ -80,7 +80,7 @@ function loadlive2d() {
     else {
         L2Dwidget.init({
             model: {
-                jsonPath: home_Path,
+                jsonPath: home_Path + `dark.json`,
             },
             display: {
                 superSample: superSample_,
