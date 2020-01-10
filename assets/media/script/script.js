@@ -42,10 +42,10 @@ function hitokoto() {
 
 function loadlive2d() {
     const home_Path = document.getElementById('home_path').innerHTML + '/media/live2d/tororo/assets/tororo.model_';
-    const currentTheme = window.localStorage && window.localStorage.getItem('theme');
-    const superSample_ = 1.0;
-    const opacityDefault_ = 0.8;
-    const opacityOnHover_ = 0.8;
+    var currentTheme = window.localStorage && window.localStorage.getItem('theme');
+    const superSample_ = 2.0;
+    const opacityDefault_ = 1;
+    const opacityOnHover_ = 1;
     const width_ = 130;
     const height_ = 130;
     const hOffset_ = 5;
@@ -54,52 +54,61 @@ function loadlive2d() {
     const show_ = true;
     const scale_ = 1;
     const motion_ = true;
-    if (currentTheme == "dark")
-        L2Dwidget.init({
-            model: {
-                jsonPath: home_Path + `light.json`,
-            },
-            display: {
-                superSample: superSample_,
-                width: width_,
-                height: height_,
-                position: position_,
-                hOffset: hOffset_,
-                vOffset: vOffset_,
-            },
-            mobile: {
-                show: show_,
-                scale: scale_,
-                motion: motion_,
-            },
-            react: {
-                opacityDefault: opacityDefault_,
-                opacityOnHover: opacityOnHover_,
-            }
-        });
-    else {
-        L2Dwidget.init({
-            model: {
-                jsonPath: home_Path + `dark.json`,
-            },
-            display: {
-                superSample: superSample_,
-                width: width_,
-                height: height_,
-                position: position_,
-                hOffset: hOffset_,
-                vOffset: vOffset_,
-            },
-            mobile: {
-                show: show_,
-                scale: scale_,
-                motion: motion_,
-            },
-            react: {
-                opacityDefault: opacityDefault_,
-                opacityOnHover: opacityOnHover_,
-            }
-        });
+    const config_light = {
+        tagMode: false,
+        debug: false,
+        model: {
+            jsonPath: home_Path + `light.json`,
+        },
+        display: {
+            superSample: superSample_,
+            width: width_,
+            height: height_,
+            position: position_,
+            hOffset: hOffset_,
+            vOffset: vOffset_,
+        },
+        mobile: {
+            show: show_,
+            scale: scale_,
+            motion: motion_,
+        },
+        react: {
+            opacityDefault: opacityDefault_,
+            opacityOnHover: opacityOnHover_,
+        },
+        log: false
+    };
+    const config_dark = {
+        tagMode: false,
+        debug: false,
+        model: {
+            jsonPath: home_Path + `dark.json`,
+        },
+        display: {
+            superSample: superSample_,
+            width: width_,
+            height: height_,
+            position: position_,
+            hOffset: hOffset_,
+            vOffset: vOffset_,
+        },
+        mobile: {
+            show: show_,
+            scale: scale_,
+            motion: motion_,
+        },
+        react: {
+            opacityDefault: opacityDefault_,
+            opacityOnHover: opacityOnHover_,
+        },
+        log: false
+    };
+    $("#live2d-widget").remove();
+    if (currentTheme == "dark") {
+        L2Dwidget.init(config_light);
+    } else {
+        L2Dwidget.init(config_dark);
     }
 }
 
@@ -166,15 +175,16 @@ document.ready(
         var mobile_toggle_theme_zh = document.getElementById("mobile-toggle-theme-zh");
         var mobile_toggle_theme_en = document.getElementById("mobile-toggle-theme-en");
         var mobile_toggle_theme_en_display = getStyle(mobile_toggle_theme_en, 'display');
+        var switch_default = document.getElementById("switch_default");
         if (isDark) {
-            document.getElementById("switch_default").checked = false;
+            switch_default.checked = false;
             // mobile
             if (mobile_toggle_theme_en_display == "inline")
                 mobile_toggle_theme_en.innerText = "·Dark";
             else
                 mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
         } else {
-            document.getElementById("switch_default").checked = true;
+            switch_default.checked = true;
             // mobile
             if (mobile_toggle_theme_en_display == "inline")
                 mobile_toggle_theme_en.innerText = "·Light";
@@ -203,8 +213,9 @@ document.ready(
                     } else {
                         document.getElementsByTagName('body')[0].classList.add('dark-theme');
                     }
-                    window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
-                    loadlive2d()
+                    window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', );
+                    location.reload()
+                        //loadlive2d();
                 })
                 // moblie
                 /* en */
@@ -225,8 +236,9 @@ document.ready(
                         else
                             mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
                     }
-                    window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
-                    loadlive2d();
+                    window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', );
+                    location.reload()
+                        //loadlive2d();
                 })
                 /* zh */
             mobile_toggle_theme_zh.addEventListener('click', () => {
@@ -246,8 +258,8 @@ document.ready(
                     else
                         mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
                 }
-                window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
-                loadlive2d();
+                window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', );
+                //loadlive2d();
             })
         };
         _Blog.toggleTheme();
