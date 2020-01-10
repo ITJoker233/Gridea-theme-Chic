@@ -43,13 +43,13 @@ function hitokoto() {
 function loadlive2d() {
     const home_Path = document.getElementById('home_path').innerHTML + '/media/live2d/tororo/assets/tororo.model_';
     const currentTheme = window.localStorage && window.localStorage.getItem('theme');
-    const superSample_ = 1.5;
+    const superSample_ = 1.0;
     const opacityDefault_ = 0.8;
-    const opacityOnHover_ = 0.2;
-    const width_ = 100;
-    const height_ = 100;
-    const hOffset_ = 15;
-    const vOffset_ = 15;
+    const opacityOnHover_ = 0.8;
+    const width_ = 130;
+    const height_ = 130;
+    const hOffset_ = 5;
+    const vOffset_ = 80;
     const position_ = 'right';
     const show_ = true;
     const scale_ = 1;

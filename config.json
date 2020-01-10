@@ -1,6 +1,6 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.5.3",
+    "version": "1.5.4",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -24,7 +24,7 @@
             "label": "友链",
             "group": "友链",
             "type": "array",
-            "value": [],
+            "value": [{ "description": "ITJoker's Blog", "siteLink": "https://blog.itjoker.cn", "siteLogo": "https://blog.itjoker.cn/images/avatar.png", "siteName": "ITJoker" }],
             "arrayItems": [{
                     "label": "名称",
                     "name": "siteName",
@@ -60,11 +60,11 @@
             "name": "version",
             "label": "主题版本",
             "group": "网站信息",
-            "value": "1.5.3",
+            "value": "1.5.4",
             "type": "select",
             "options": [{
                 "label": "最新版本",
-                "value": "1.5.3"
+                "value": "1.5.4"
             }]
         },
         {
