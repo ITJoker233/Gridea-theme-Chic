@@ -21,37 +21,34 @@
         <script src="<%= themeConfig.domain %>/media/script/tocbot.min.js"></script>
         <script src="<%= themeConfig.domain %>/media/script/script.min.js"></script>
         <script src="<%= themeConfig.domain %>/media/script/icon.min.js"></script>
-        <% if (site.customConfig.live2d == "on") { %>
-            <link rel="stylesheet" href="<%= themeConfig.domain %>/media/live2d/css/live2d.css" />
+        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
+        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+        <% if (site.customConfig.baidu) { %>
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
             <% } %>
-                <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
-                <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
-                <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
-                <% if (site.customConfig.baidu) { %>
+                <% if (site.customConfig.ga) { %>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
                     <script>
-                        (function() {
-                            var bp = document.createElement('script');
-                            var curProtocol = window.location.protocol.split(':')[0];
-                            if (curProtocol === 'https') {
-                                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                            } else {
-                                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                            }
-                            var s = document.getElementsByTagName("script")[0];
-                            s.parentNode.insertBefore(bp, s);
-                        })();
+                        window.dataLayer = window.dataLayer || [];
+
+                        function gtag() {
+                            dataLayer.push(arguments);
+                        }
+                        gtag('js', new Date());
+                        gtag('config', '<%= site.customConfig.ga %>');
                     </script>
                     <% } %>
-                        <% if (site.customConfig.ga) { %>
-                            <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
-                            <script>
-                                window.dataLayer = window.dataLayer || [];
-
-                                function gtag() {
-                                    dataLayer.push(arguments);
-                                }
-                                gtag('js', new Date());
-                                gtag('config', '<%= site.customConfig.ga %>');
-                            </script>
-                            <% } %>

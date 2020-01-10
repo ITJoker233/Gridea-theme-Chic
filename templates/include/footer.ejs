@@ -1,119 +1,80 @@
-<% if (site.customConfig.live2d == "on") { %>
-<div id="landlord">
-    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
-</div>
-<% } %>
 <% if (site.customConfig.music_switch == "on") { %>
-<div id="player"></div>
-<% } %>
-<footer id="footer" class="footer">
+    <div id="player"></div>
+    <% } %>
+        <footer id="footer" class="footer">
 
-    <div class="copyright">
-        <div class="Like">
-            <div class="tip" data-tooltip="Do you like it?">
-                <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+            <div class="copyright">
+                <div class="Like">
+                    <div class="tip" data-tooltip="Do you like it?">
+                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
                         aria-hidden="true">
                         <use xlink:href="#like"></use>
                     </svg><b class="like_text" id="star"></b></a>
-            </div>
-        </div>
-        <%- themeConfig.footerInfo %>
-        <b id="hitokoto"></b><br>
-        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8"
-            class="my-face">
+                    </div>
+                </div>
+                <%- themeConfig.footerInfo %>
+                    <b id="hitokoto"></b><br>
+                    <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
             <path
                 d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
                 fill="#93b5cf"></path>
         </svg>
-        <%= themeConfig.siteName%> &copy;Copyright
-        <script>
-            var date = new Date();
-            document.write("" + date.getFullYear());
-        </script>
-        | Powered by <a href="https://coding.net" target="_blank">Coding.net</a>
-    </div>
-    <div id="update" style="display:none;">
-        <%= site.customConfig.update%>
-    </div>
-    <% if (site.customConfig.update == "on") { %>
-    <div id="version" style="display:none;">
-        <%= site.customConfig.version%>
-    </div>
-    <%}%>
-                </footer>
-                <% if (site.customConfig.live2d == "on") { %>
-    <script type="text/javascript" src="<%= themeConfig.domain %>/media/live2d/js/live2d.min.js"></script>
-    <script>
-        var message_Path = '/media/live2d/';
+                    <%= themeConfig.siteName%> &copy;Copyright
+                        <script>
+                            var date = new Date();
+                            document.write("" + date.getFullYear());
+                        </script>
+                        | Powered by <a href="https://coding.net" target="_blank">Coding.net</a>
+            </div>
+            <div id="update" style="display:none;">
+                <%= site.customConfig.update%>
+            </div>
+            <% if (site.customConfig.update == "on") { %>
+                <div id="version" style="display:none;">
+                    <%= site.customConfig.version%>
+                </div>
+                <%}%>
+                    <script>
+                        var pat = '';
                         <% if (site.customConfig.live2ddebug == "on") { %>
-                        var home_Path = document.location.protocol + '//' + window.document.location.hostname + ':4000/'; //Debug
-                        <% } else { %>
-                        var home_Path = document.location.protocol + '//' + window.document.location.hostname + '/';
+                        pat = ':4000';
                         <%}%>
-            $(document).ready(function () {
-                var _Blog = window._Blog || {};
-                const currentTheme = window.localStorage && window.localStorage.getItem('theme');
-                var AIimgSrc = [home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_00.png", home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_01.png",]
-                var images = [];
-                var imgLength = AIimgSrc.length;
-                var loadingNum = 0;
-                for (var i = 0; i < imgLength; i++) {
-                    images[i] = new Image();
-                    images[i].src = AIimgSrc[i];
-                    images[i].onload = function () {
-                        loadingNum++;
-                        if (loadingNum === imgLength) {
-                            var live2dhidden = localStorage.getItem("live2dhidden");
-                            if (live2dhidden === "0") {
-                                setTimeout(function () {
-                                    $('#open_live2d').fadeIn(20)
-                                }, 130)
-                            } else {
-                                setTimeout(function () {
-                                    $('#landlord').fadeIn(20)
-                                }, 130)
-                            }
-                            setTimeout(function () {
-                                if (currentTheme == "dark")
-                                    loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_light.json")
-                                else {
-                                    loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_dark.json")
-                                }
-                            }, 100);
-                            images = null
-                        }
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+
+        </footer>
+        <% if (site.customConfig.live2d == "on") { %>
+            <script type="text/javascript" src="<%= themeConfig.domain %>/media/live2d/L2Dwidget.min.js"></script>
+            <script>
+                loadlive2d();
+            </script>
+            <% } %>
+                <script>
+                    <% if (site.customConfig.music_switch == "on") { %>
+
+                    function LoadPlayer() {
+                        var audio_name = '<%= site.customConfig.music_name%>';
+                        var audio_artist = '<%= site.customConfig.music_author%>';
+                        var audio_url = '<%= site.customConfig.music_url%>';
+                        var audio_cover = '<%= site.customConfig.music_pic%>';
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: [{
+                                name: audio_name,
+                                artist: audio_artist,
+                                url: audio_url,
+                                cover: audio_cover,
+                            }]
+                        });
+
                     }
-                }
-            });
-    </script>
-    <% } %>
-    <script>
-                            <% if (site.customConfig.music_switch == "on") { %>
-
-            function LoadPlayer() {
-
-                var audio_name = '<%= site.customConfig.music_name%>';
-                var audio_artist = '<%= site.customConfig.music_author%>';
-                var audio_url = '<%= site.customConfig.music_url%>';
-                var audio_cover = '<%= site.customConfig.music_pic%>';
-                const ap = new APlayer({
-                    container: document.getElementById('player'),
-                    fixed: true,
-                    audio: [{
-                        name: audio_name,
-                        artist: audio_artist,
-                        url: audio_url,
-                        cover: audio_cover,
-                    }]
-                });
-
-            }
-            LoadPlayer();
-                            <% } %>
-            hitokoto();
-        getStar();
-        hljs.initHighlighting();
-        console.clear();
-        CheckVersion();
-        console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
-    </script>
+                    LoadPlayer();
+                    <% } %>
+                    hitokoto();
+                    getStar();
+                    hljs.initHighlighting();
+                    //console.clear();
+                    CheckVersion();
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>

@@ -40,6 +40,69 @@ function hitokoto() {
     xhr.send();
 }
 
+function loadlive2d() {
+    const home_Path = document.getElementById('home_path').innerHTML + '/media/live2d/tororo/assets/tororo.model_light.json';
+    const currentTheme = window.localStorage && window.localStorage.getItem('theme');
+    const superSample_ = 1.5;
+    const opacityDefault_ = 0.8;
+    const opacityOnHover_ = 0.2;
+    const width_ = 100;
+    const height_ = 100;
+    const hOffset_ = 15;
+    const vOffset_ = 15;
+    const position_ = 'right';
+    const show_ = true;
+    const scale_ = 1;
+    const motion_ = true;
+    if (currentTheme == "dark")
+        L2Dwidget.init({
+            model: {
+                jsonPath: home_Path,
+            },
+            display: {
+                superSample: superSample_,
+                width: width_,
+                height: height_,
+                position: position_,
+                hOffset: hOffset_,
+                vOffset: vOffset_,
+            },
+            mobile: {
+                show: show_,
+                scale: scale_,
+                motion: motion_,
+            },
+            react: {
+                opacityDefault: opacityDefault_,
+                opacityOnHover: opacityOnHover_,
+            }
+        });
+    else {
+        L2Dwidget.init({
+            model: {
+                jsonPath: home_Path,
+            },
+            display: {
+                superSample: superSample_,
+                width: width_,
+                height: height_,
+                position: position_,
+                hOffset: hOffset_,
+                vOffset: vOffset_,
+            },
+            mobile: {
+                show: show_,
+                scale: scale_,
+                motion: motion_,
+            },
+            react: {
+                opacityDefault: opacityDefault_,
+                opacityOnHover: opacityOnHover_,
+            }
+        });
+    }
+}
+
 function getStar() {
     var star = document.getElementById("star");
     var star_count = 0;
@@ -141,39 +204,7 @@ document.ready(
                         document.getElementsByTagName('body')[0].classList.add('dark-theme');
                     }
                     window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
-                    const currentTheme = window.localStorage && window.localStorage.getItem('theme');
-                    var AIimgSrc = [home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_00.png", home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_01.png", ]
-                    var images = [];
-                    var imgLength = AIimgSrc.length;
-                    var loadingNum = 0;
-                    for (var i = 0; i < imgLength; i++) {
-                        images[i] = new Image();
-                        images[i].src = AIimgSrc[i];
-                        images[i].onload = function() {
-                            loadingNum++;
-                            if (loadingNum === imgLength) {
-                                var live2dhidden = localStorage.getItem("live2dhidden");
-                                if (live2dhidden === "0") {
-                                    setTimeout(function() {
-                                        $('#open_live2d').fadeIn(20)
-                                    }, 130)
-                                } else {
-                                    setTimeout(function() {
-                                        $('#landlord').fadeIn(20)
-                                    }, 130)
-                                }
-                                setTimeout(function() {
-                                    if (currentTheme == "dark")
-                                        loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_light.json")
-                                    else {
-                                        loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_dark.json")
-                                    }
-                                }, 100);
-                                images = null
-                            }
-                        }
-                    }
-
+                    loadlive2d()
                 })
                 // moblie
                 /* en */
@@ -195,38 +226,7 @@ document.ready(
                             mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
                     }
                     window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
-                    const currentTheme = window.localStorage && window.localStorage.getItem('theme');
-                    var AIimgSrc = [home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_00.png", home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_01.png", ]
-                    var images = [];
-                    var imgLength = AIimgSrc.length;
-                    var loadingNum = 0;
-                    for (var i = 0; i < imgLength; i++) {
-                        images[i] = new Image();
-                        images[i].src = AIimgSrc[i];
-                        images[i].onload = function() {
-                            loadingNum++;
-                            if (loadingNum === imgLength) {
-                                var live2dhidden = localStorage.getItem("live2dhidden");
-                                if (live2dhidden === "0") {
-                                    setTimeout(function() {
-                                        $('#open_live2d').fadeIn(20)
-                                    }, 130)
-                                } else {
-                                    setTimeout(function() {
-                                        $('#landlord').fadeIn(20)
-                                    }, 130)
-                                }
-                                setTimeout(function() {
-                                    if (currentTheme == "dark")
-                                        loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_light.json")
-                                    else {
-                                        loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_dark.json")
-                                    }
-                                }, 100);
-                                images = null
-                            }
-                        }
-                    }
+                    loadlive2d();
                 })
                 /* zh */
             mobile_toggle_theme_zh.addEventListener('click', () => {
@@ -247,43 +247,9 @@ document.ready(
                         mobile_toggle_theme_zh.innerText = "·\u6697\u9ED1";
                 }
                 window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
-                const currentTheme = window.localStorage && window.localStorage.getItem('theme');
-                var AIimgSrc = [home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_00.png", home_Path + message_Path + "model/tororo/assets/moc/tororo.2048/texture_01.png", ]
-                var images = [];
-                var imgLength = AIimgSrc.length;
-                var loadingNum = 0;
-                for (var i = 0; i < imgLength; i++) {
-                    images[i] = new Image();
-                    images[i].src = AIimgSrc[i];
-                    images[i].onload = function() {
-                        loadingNum++;
-                        if (loadingNum === imgLength) {
-                            var live2dhidden = localStorage.getItem("live2dhidden");
-                            if (live2dhidden === "0") {
-                                setTimeout(function() {
-                                    $('#open_live2d').fadeIn(20)
-                                }, 130)
-                            } else {
-                                setTimeout(function() {
-                                    $('#landlord').fadeIn(20)
-                                }, 130)
-                            }
-                            setTimeout(function() {
-                                if (currentTheme == "dark")
-                                    loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_light.json")
-                                else {
-                                    loadlive2d("live2d", message_Path + "model/tororo/assets/tororo.model_dark.json")
-                                }
-                            }, 100);
-                            images = null
-                        }
-                    }
-                }
+                loadlive2d();
             })
         };
         _Blog.toggleTheme();
-
-        // ready function.
-
     }
 );
