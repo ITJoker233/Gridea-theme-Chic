@@ -8,45 +8,45 @@
             </div>
             <div class="menu navbar-right">
                 <% menus.forEach(function (menu) { %>
-                <a class="menu-item" href="<%= menu.link %>">
-                    <%= menu.name %>
-                </a>
-                <% }); %>
-                <input id="switch_default" type="checkbox" class="switch_default">
-                <label for="switch_default" class="toggleBtn"></label>
+                    <a class="menu-item" href="<%= menu.link %>">
+                        <%= menu.name %>
+                    </a>
+                    <% }); %>
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
             </div>
 
         </div>
     </nav>
 
     <%# mobile %>
-    <nav class="navbar-mobile" id="nav-mobile">
-        <div class="container">
-            <div class="navbar-header">
-                <div>
-                    <a href="<%= themeConfig.domain %>">
-                        <%= themeConfig.siteName%>
-                    </a>
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="<%= themeConfig.domain %>">
+                            <%= themeConfig.siteName%>
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
+                    </div>
                     <!--en-->
-                    <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
                     <!--zh-->
-                    <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;\u6697\u9ED1</a>
-                </div>
-                <!--en-->
-                <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
-                <!--zh-->
-                <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; è�œå�•</div>
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
 
+                </div>
+                <div class="menu" id="mobile-menu">
+                    <% menus.forEach(function (menu) { %>
+                        <a class="menu-item" href="<%= menu.link %>">
+                            <%= menu.name %>
+                        </a>
+                        <% }); %>
+                </div>
             </div>
-            <div class="menu" id="mobile-menu">
-                <% menus.forEach(function (menu) { %>
-                <a class="menu-item" href="<%= menu.link %>">
-                    <%= menu.name %>
-                </a>
-                <% }); %>
-            </div>
-        </div>
-    </nav>
+        </nav>
 </header>
 <script>
     var mobileBtn = function f() {

@@ -125,7 +125,7 @@ function getStar() {
                 if (data[i]['name'] == "Gridea-theme-Chic") {
                     star_count = data[i]['stargazers_count'];
                     for (var j = 0; j < parseInt(star_count) + 1; j++) {
-                        setTimeout(star.innerHTML = j.toString(), 500);
+                        setTimeout(setTimeout(star.innerHTML = j.toString(), 500), 100);
                     }
                     break;
                 }
