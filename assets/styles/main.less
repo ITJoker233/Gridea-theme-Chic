@@ -1,123 +1,205 @@
 @charset "UTF-8";
 
 /*Like*/
-.Like { 
-    width: 100px;
-    display: flex;
-    align-items: center;
-    line-height: 1rem;
-    cursor: pointer;
-    bottom: -20px;
-    color:rgba(89, 99, 105, 1);
-    position: relative;
-    margin-left: 91%;
-    margin-right: 0;
+.Like {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  line-height: 1rem;
+  cursor: pointer;
+  bottom: -20px;
+  color: rgba(89, 99, 105, 1);
+  position: relative;
+  margin-left: 91%;
+  margin-right: 0;
 }
 
 .Like:hover {
-    color: #fff;
-    font-size: 22px;
-    border-radius: 2px;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 2px;
 }
 
 .Like>div {
-    background: rgba(1, 1, 1, 0.2);
-    height: 24px;
-    border-radius: 4px;
-    padding: 2px;
-    display: flex;
-    align-items: center;
+  background: rgba(1, 1, 1, 0.2);
+  height: 24px;
+  border-radius: 4px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
 }
 
 .Like>div svg {
-    width: 28px;
-    height: 28px;
+  width: 28px;
+  height: 28px;
 }
 
 .Like>div a {
-    font-weight: bold;
-    text-align: center;
-    padding-right: 4px;
-    padding-left: 2px;
-    align-items: center;
-    font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding-right: 4px;
+  padding-left: 2px;
+  align-items: center;
+  font-size: 18px;
 }
 
 .like_text {
-    position: relative;
-    top:-5px;
+  position: relative;
+  top: -5px;
 }
+
 /*Tips*/
 .tip::after {
-    background: rgba(79, 89, 95, 0.4);
-    border-radius: 2px;
-    bottom: 100%;
-    color: #fff;
-    content: attr(data-tooltip);
-    display: block;
-    font-size: .7rem;
-    left: 50%;
-    max-width: 320px;
-    opacity: 0;
-    overflow: hidden;
-    font-weight: lighter;
-    padding: 2px 5px;
-    line-height: 20px;
-    pointer-events: none;
-    position: absolute;
-    text-overflow: ellipsis;
-    transform: translate(-50%, .4rem);
-    transition: opacity .2s, transform .2s;
-    white-space: pre;
-    z-index: 30;
+  background: rgba(79, 89, 95, 0.4);
+  border-radius: 2px;
+  bottom: 100%;
+  color: #fff;
+  content: attr(data-tooltip);
+  display: block;
+  font-size: .7rem;
+  left: 50%;
+  max-width: 320px;
+  opacity: 0;
+  overflow: hidden;
+  font-weight: lighter;
+  padding: 2px 5px;
+  line-height: 20px;
+  pointer-events: none;
+  position: absolute;
+  text-overflow: ellipsis;
+  transform: translate(-50%, .4rem);
+  transition: opacity .2s, transform .2s;
+  white-space: pre;
+  z-index: 30;
 }
 
 .tip:focus::after,
 .tip:hover::after {
-    opacity: 1;
-    transform: translate(-50%, -.2rem)
+  opacity: 1;
+  transform: translate(-50%, -.2rem)
 }
+
 /*Friends*/
 .friend-box {
+  float: left;
+  width: calc(50% - 20px);
+  margin: 15px 10px;
+
+  img.friend-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50% !important;
+    float: left;
+    margin: 0 15px 0 0 !important;
+  }
+
+  .flink-info {
+    height: 70px;
+    overflow: hidden;
+    line-height: 24px;
+  }
+}
+
+/*Toc*/
+.post-toc {
+  .markdownIt-TOC {
+    position: sticky;
+    top: 32px;
+    font-size: 12px;
+    list-style: none;
+    padding: 1px 0px 0px 0px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 8px;
+      bottom: 0;
+      width: 1px;
+      background-color: #ebedef;
+      opacity: .5;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    padding-left: 16px;
+
+    a {
+      padding: 4px;
+      display: block;
+      transition: all 0.3s;
+
+      &:hover {
+        border-radius: 5px;
+        color: #2d96bd;
+        font-size: larger;
+        background: #33333333;
+      }
+
+      &:hover,
+      .dark-theme {
+        border-radius: 5px;
+        color: #2d96bd;
+        font-size: larger;
+        background: #ffffff33;
+      }
+
+      &.current {
+        color: #2d96bd;
+        border-radius: 5px;
+        font-size: larger;
+        background: #33333333;
+      }
+
+      &.current,
+      .dark-theme {
+        color: #2d96bd;
+        border-radius: 5px;
+        font-size: larger;
+        background: #ffffff33;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .post-toc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .Like {
+    left: -80%;
+    bottom: 15px;
+  }
+
+  .friend-box {
     float: left;
     width: calc(50% - 20px);
     margin: 15px 10px;
-    img.friend-avatar{
-      width: 70px;
-      height: 70px;
+
+    img.friend-avatar {
+      width: 35px;
+      height: 35px;
       border-radius: 50% !important;
       float: left;
-      margin:0 15px 0 0 !important;
+      margin: 0 15px 0 0 !important;
     }
-    .flink-info{
-      height:70px;
+
+    .flink-info {
+      height: 70px;
       overflow: hidden;
       line-height: 24px;
     }
   }
-  @media screen and (max-width: 780px) {
-    .Like {
-        left: -80%;
-        bottom: 15px;
-    }
-    .friend-box {
-        float: left;
-        width: calc(50% - 20px);
-        margin: 15px 10px;
-        img.friend-avatar{
-          width: 35px;
-          height: 35px;
-          border-radius: 50% !important;
-          float: left;
-          margin:0 15px 0 0 !important;
-        }
-        .flink-info{
-          height:70px;
-          overflow: hidden;
-          line-height: 24px;
-        }
-      }
 }
+
+
 .en {}
 
 .zh {}

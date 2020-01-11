@@ -33,10 +33,6 @@ pre {
     border-radius: 5px;
 }
 
-a {
-    background-color: transparent;
-}
-
 abbr[title] {
     border-bottom: none;
     text-decoration: underline;
@@ -229,6 +225,7 @@ body.dark-theme {
 }
 
 a {
+    background-color: transparent;
     color: #161209;
     text-decoration: none;
     transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
@@ -1080,7 +1077,7 @@ header label {
 .post-toc {
     position: fixed;
     top: 95px;
-    right: 2em;
+    right: 12rem;
     width: 15rem;
     font-size: 0.75rem;
 }
@@ -1359,7 +1356,7 @@ a.toc-link {
 }
 
 .post-content figure.highlight .gutter {
-    color: $hight-gutter;
+    color: hight-gutter;
 }
 
 .post-content figure.highlight pre {

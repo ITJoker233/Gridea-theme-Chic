@@ -40,6 +40,35 @@ function hitokoto() {
     xhr.send();
 }
 
+function scroll() {
+    /* scroll */
+    let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+    window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+            let section = document.getElementById(decodeURI(link.hash).substring(1));
+            let nextSection = null
+            if (mainNavLinks[index + 1]) {
+                nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+            }
+            if (section.offsetTop <= fromTop) {
+                if (nextSection) {
+                    if (nextSection.offsetTop > fromTop) {
+                        link.classList.add("current");
+                    } else {
+                        link.classList.remove("current");
+                    }
+                } else {
+                    link.classList.add("current");
+                }
+            } else {
+                link.classList.remove("current");
+            }
+        });
+    });
+}
+
 function loadlive2d() {
     const home_Path = document.getElementById('home_path').innerHTML + '/media/live2d/tororo/assets/tororo.model_';
     var currentTheme = window.localStorage && window.localStorage.getItem('theme');
