@@ -79,6 +79,154 @@
   transform: translate(-50%, -.2rem)
 }
 
+/*Posts*/
+.post-main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  margin-top: 80px;
+}
+
+.post-list {
+  border-radius: 5px;
+  max-width: 800px;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.dark-theme {
+  .post-item {
+    background-color: #424242;
+    box-shadow: 1px 5px 10px -5px #444;
+
+    &:hover {
+      background-color: #e0e0e0;
+      box-shadow: 1px 5px 10px -5px #888;
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+
+      span {
+        color: #161209;
+      }
+
+      a {
+        color: #161209;
+        text-decoration: none;
+        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+
+        &:hover {
+          color: #2d96bd;
+          text-decoration: none;
+          transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+        }
+      }
+    }
+  }
+}
+
+.post-item {
+  display: flex;
+  border-radius: 5px;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding: 32px 10px;
+  max-height: 200px;
+  box-shadow: 1px 5px 10px -5px #444;
+  position:relative;
+  .content {
+    flex: 1;
+
+    .post-abstract {
+      font-size: 14px;
+      margin: 16px 0 8px;
+      flex: 1;
+      color: #4E616C;
+      overflow: hidden;
+      line-height: 24px;
+      position: relative;
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+
+      strong {
+        font-weight: bolder;
+      }
+
+      a {
+        font-weight: 600;
+        background-color: transparent;
+        color: #161209;
+        text-decoration: none;
+        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+          color: #2d96bd;
+          text-decoration: none;
+          transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+        }
+      }
+
+      code {
+        padding: 0 3px;
+        margin: 0 2px;
+        background: rgba(195, 195, 195, 0.41);
+        font-size: 0.9em;
+        border-radius: 2px;
+      }
+
+    }
+  }
+
+  .feature-container {
+    margin-left: 16px;
+    flex-shrink: 0;
+    width: 240px;
+    height: 135px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+  }
+
+  @media screen and (max-width: 479px) {
+    .feature-container {
+      width: 160px;
+      height: 90px;
+      margin-top: 25%;
+    }
+  }
+
+  &:hover {
+    background-color: #424242;
+    box-shadow: 1px 5px 10px -5px #888;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+
+    span {
+      color: #bdbdbd;
+    }
+
+    a {
+      color: #bdbdbd;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+
+      &:hover {
+        color: #fafafa;
+        text-decoration: none;
+        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+      }
+    }
+  }
+}
+
 /*Friends*/
 .friend-box {
   float: left;

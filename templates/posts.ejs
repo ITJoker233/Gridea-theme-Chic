@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <% if(site.customConfig.language == "zh"){%>
+        <%- include('./include/head', { siteTitle: `\u6587\u7AE0 | ${themeConfig.siteName}` }) %>
+            <% }else{%>
+                <%- include('./include/head', { siteTitle: `Posts | ${themeConfig.siteName}` }) %>
+                    <%}%>
+</head>
+
+<body>
+    <div class="wrapper">
+        <%- include('./include/header') %>
+            <div class="post-main">
+                <div class="post-list">
+                    <%- include('./include/post-list') %>
+                </div>
+            </div>
+    </div>
+    <%- include('./include/footer') %>
+</body>
+
+</html>

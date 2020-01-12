@@ -1193,6 +1193,9 @@ a.toc-link {
 }
 
 @media screen and (max-width: 479px) {
+    .post-main {
+        padding-top: 40pt;
+    }
     .main {
         padding-top: 40pt;
     }

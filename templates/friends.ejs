@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <% if(site.customConfig.language == "zh"){%>
-    <%- include('./include/head', { siteTitle: `友链 | ${themeConfig.siteName}` }) %>
-    <% }else{%>
-    <%- include('./include/head', { siteTitle: `Friends | ${themeConfig.siteName}` }) %>
-    <%}%>
+        <%- include('./include/head', { siteTitle: `\u53CB\u94FE | ${themeConfig.siteName}` }) %>
+            <% }else{%>
+                <%- include('./include/head', { siteTitle: `Friends | ${themeConfig.siteName}` }) %>
+                    <%}%>
 </head>
+
 <body>
     <div class="wrapper">
         <%- include('./include/header') %>
-    <div class="main">
-        <div class="container">
-            <article class="post-wrap">
-                <header class="post-header">
-                    <h1 class="post-title zh">
-                        &#x53CB;&#x94FE;
-                    </h1>
-                    <h1 class="post-title en">
-                        Friends
-                    </h1>
-                </header>
-                <div class="post-content">
-                    <% if (site.customConfig.friends) { %>
-                    <% site.customConfig.friends.forEach(function(friend) { %>
-                    <div class="friend-box">
-                        <img class="friend-avatar" src="<%= friend.siteLogo %>">
-                        <div class="flink-info">
-                            <a href="<%= friend.siteLink %>" target="_blank">
-                                <%= friend.siteName %>
-                            </a>
-                            <br />
-                            <%= friend.description %>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title zh">
+                                &#x53CB;&#x94FE;
+                            </h1>
+                            <h1 class="post-title en">
+                                Friends
+                            </h1>
+                        </header>
+                        <div class="post-content">
+                            <% if (site.customConfig.friends) { %>
+                                <% site.customConfig.friends.forEach(function(friend) { %>
+                                    <div class="friend-box">
+                                        <img class="friend-avatar" src="<%= friend.siteLogo %>">
+                                        <div class="flink-info">
+                                            <a href="<%= friend.siteLink %>" target="_blank">
+                                                <%= friend.siteName %>
+                                            </a>
+                                            <br />
+                                            <%= friend.description %>
+                                        </div>
+                                    </div>
+                                    <% }); %>
+                                        <% } %>
                         </div>
-                    </div>
-                    <% }); %>
-                    <% } %>
+                    </article>
                 </div>
-            </article>
-        </div>
-    </div>
-    <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-    <% if (commentSetting.commentPlatform === 'gitalk') { %>
-    <%- include('./include/gitalk') %>
-    <% } %>
-    <% if (commentSetting.commentPlatform === 'disqus') { %>
-    <%- include('./include/disqus') %>
-    <% } %>
-    <% } %>
+            </div>
+            <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+                <% if (commentSetting.commentPlatform === 'gitalk') { %>
+                    <%- include('./include/gitalk') %>
+                        <% } %>
+                            <% if (commentSetting.commentPlatform === 'disqus') { %>
+                                <%- include('./include/disqus') %>
+                                    <% } %>
+                                        <% } %>
     </div>
     <%- include('./include/footer') %>
-    </body>
+</body>
+
 </html>
