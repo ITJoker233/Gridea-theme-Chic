@@ -1,50 +1,51 @@
 <% site.posts.forEach(function(post) { %>
-<% if(!post.hideInList){%>
-<%if(post.isTop){ %>
-<section class="post-item">
-  <div class="content">
-    <a href="<%= post.link %>">
-      <h2 class="post-title">
-        <%= post.title %>
-      </h2>
-    </a>
-    <div class="post-abstract">
-      <%- post.abstract %>
-    </div>
-    <div class="post-info">
-      <span><i class="fa fa-calendar" aria-hidden="true"></i> <%= post.dateFormat %></span>
-      <% if (post.tags.length > 0) { %><span><i class="fa fa-tags"
+    <% if(!post.hideInList){%>
+        <%if(post.isTop){ %>
+            <section class="post-item">
+                <div class="content">
+                    <a href="<%= post.link %>">
+                        <h2 class="post-title">
+                            <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                            <%= post.title %>
+                        </h2>
+                    </a>
+                    <div class="post-abstract">
+                        <%- post.abstract %>
+                    </div>
+                    <div class="post-info">
+                        <span><i class="fa fa-calendar" aria-hidden="true"></i> <%= post.dateFormat %></span>
+                        <% if (post.tags.length > 0) { %><span><i class="fa fa-tags"
           aria-hidden="true"></i><% post.tags.forEach(function(tag, index) { %><a
           href="<%= tag.link %>"><%= tag.name %><% if (index !== post.tags.length - 1) { %>,<% } %></a><% }); %></span>
-      <% } %>
-    </div>
-  </div>
-  <% if (themeConfig.showFeatureImage && post.feature) { %>
-  <a href="<%= post.link %>">
+                            <% } %>
+                    </div>
+                </div>
+                <% if (themeConfig.showFeatureImage && post.feature) { %>
+                    <a href="<%= post.link %>">
     <div class="feature-container" style="background-image: url('<%= post.feature %>')">
     </div>
   </a>
-  <% } %>
-</section>
-<% } %>
-<% } %>
-<% }); %>
-<% site.posts.forEach(function(post) { %>
-<% if(!post.hideInList){%>
-<section class="post-item">
-  <div class="content">
-    <a href="<%= post.link %>">
-      <h2 class="post-title">
-        <%= post.title %>
-      </h2>
-    </a>
-    <div class="post-abstract">
-      <%- post.abstract %>
-    </div>
-    <div class="post-info">
-      <span><i class="fa fa-calendar" aria-hidden="true"></i> <%= post.dateFormat %></span>
-      <% if (post.tags.length > 0) { %>
-      <span>
+                    <% } %>
+            </section>
+            <% } %>
+                <% } %>
+                    <% }); %>
+                        <% site.posts.forEach(function(post) { %>
+                            <% if(!post.hideInList){%>
+                                <section class="post-item">
+                                    <div class="content">
+                                        <a href="<%= post.link %>">
+                                            <h2 class="post-title">
+                                                <%= post.title %>
+                                            </h2>
+                                        </a>
+                                        <div class="post-abstract">
+                                            <%- post.abstract %>
+                                        </div>
+                                        <div class="post-info">
+                                            <span><i class="fa fa-calendar" aria-hidden="true"></i> <%= post.dateFormat %></span>
+                                            <% if (post.tags.length > 0) { %>
+                                                <span>
         <i class="fa fa-tags" aria-hidden="true"></i>
         <% post.tags.forEach(function(tag, index) { %>
         <a href="<%= tag.link %>">
@@ -55,15 +56,15 @@
         </a>
         <% }); %>
       </span>
-      <% } %>
-    </div>
-  </div>
-  <% if (themeConfig.showFeatureImage && post.feature) { %>
-  <a href="<%= post.link %>">
+                                                <% } %>
+                                        </div>
+                                    </div>
+                                    <% if (themeConfig.showFeatureImage && post.feature) { %>
+                                        <a href="<%= post.link %>">
     <div class="feature-container" style="background-image: url('<%= post.feature %>')">
     </div>
   </a>
-  <% } %>
-</section>
-<% } %>
-<% }); %>
+                                        <% } %>
+                                </section>
+                                <% } %>
+                                    <% }); %>
