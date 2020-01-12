@@ -1225,6 +1225,10 @@ a.toc-link {
         box-sizing: border-box;
         position: relative;
     }
+    .navbar-mobile .container .navbar-header .search-input {
+        cursor: pointer;
+        width: 100px;
+    }
     .navbar-mobile .container .navbar-header .menu-toggle {
         cursor: pointer;
         line-height: 5.5em;

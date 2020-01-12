@@ -79,6 +79,35 @@
   transform: translate(-50%, -.2rem)
 }
 
+/*search*/
+.search-input {
+  position: relative;
+  top: -3px;
+  left: -2px;
+  width: 160px;
+  height: 26px;
+  padding: 0 0 2px 27px;
+  font-size: 16px;
+  background: #fafafa url(https://i.loli.net/2020/01/12/X3cnLxGjo7Wb8Jk.png) 6px 3px no-repeat;
+  background-size: 20px;
+  border: none;
+  border-radius: 15px;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  outline: none;
+  color: #424242;
+  border-bottom: 1px solid #beb1b1;
+  transition: border-color .2s;
+  &:hover {
+    width: 180px;
+  }
+
+  .dark-theme {
+    color:#fafafa;
+  }
+}
+
 /*Posts*/
 .post-main {
   flex-grow: 1;
@@ -136,7 +165,8 @@
   padding: 32px 10px;
   max-height: 200px;
   box-shadow: 1px 5px 10px -5px #444;
-  position:relative;
+  position: relative;
+
   .content {
     flex: 1;
 

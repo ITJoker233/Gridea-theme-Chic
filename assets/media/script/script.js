@@ -85,7 +85,6 @@ function loadlive2d() {
     const motion_ = true;
     const config_light = {
         tagMode: false,
-        debug: false,
         model: {
             jsonPath: home_Path + `light.json`,
         },
@@ -106,11 +105,11 @@ function loadlive2d() {
             opacityDefault: opacityDefault_,
             opacityOnHover: opacityOnHover_,
         },
-        log: false
+        log: false,
+        debug: false
     };
     const config_dark = {
         tagMode: false,
-        debug: false,
         model: {
             jsonPath: home_Path + `dark.json`,
         },
@@ -131,7 +130,8 @@ function loadlive2d() {
             opacityDefault: opacityDefault_,
             opacityOnHover: opacityOnHover_,
         },
-        log: false
+        log: false,
+        debug: false
     };
     $("#live2d-widget").remove();
     if (currentTheme == "dark") {
