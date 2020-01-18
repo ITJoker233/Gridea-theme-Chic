@@ -45,7 +45,7 @@
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.6.1
+## 📌当前版本：1.6.2
 
 1. (刚开始使用这个主题的请忽略这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号，(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
@@ -55,7 +55,16 @@
 
 ## 🌈下载地址
 
-- [v1.6.1(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.1)
+<details>
+<summary>当前版本</summary>
+
+- [v1.6.2(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.2)
+</details>
+
+<details>
+<summary>历史版本</summary>
+
+- [v1.6.1](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.1)
 - [v1.6.0](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.0)
 - [v1.5.9](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.5.9)
 - [v1.5.8](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.5.8)
@@ -74,14 +83,13 @@
 - [v1.4.5](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.5)
 - [v1.4.3](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.3)
 - [v1.4.2](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.2)
+</details>
 
 ## 🔖本次更新日志
 ### 本次更新了以下内容：
-1. 本次更新内容较多，所有的静态文件都已经换成CDN了，如果需要自己DIY主题，详情取消Head.ejs的注释，把原本的注释掉即可
-2. 本次修复了若干Bug
-3. 增加了live2d的CDN
-4. 下次更新未知....
-5. 本次更新时间为：2020.01.13
+1. 修复了live2d在Edge上无法显示的bug
+2. 下次更新未知....
+3. 本次更新时间为：2020.01.18
 
 ## 📢作者留言
 
@@ -95,7 +103,7 @@ git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
 ```
 - <font color='red'>需要在主题的设置里面的自定义设置中设置好网站信息，否则会有可能报错</font>
 
-## 如果你喜欢的话可以给个Star✨,<font color='red'>如果你想赞助的话，可以联系作者~2333 联系方式在博客~</font>
+## 如果你喜欢的话可以给个Star✨ <font color='red'>如果你想赞助的话，可以联系作者~2333 联系方式在博客</font>
 
 ## 📃开源协议
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
