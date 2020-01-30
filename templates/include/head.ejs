@@ -10,19 +10,22 @@
 <meta name="author" content="<%= site.customConfig.author%>">
 <meta name="description" content="<%= site.customConfig.description%>">
 <meta name="keywords" content="<%= site.customConfig.keywords%>">
+<!--CDN样式-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/css/style.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/main.css" />
-<!--<link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/style.min.css" />
-<link rel="stylesheet" href="<%= themeConfig.domain %>/styles/main.css" />-->
+<!--本地样式-->
+<!--<link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/style.min.css" />-->
+<link rel="stylesheet" href="<%= themeConfig.domain %>/styles/main.css" />
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 <% if (site.customConfig.music_switch == "on") { %>
-    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.0/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
     <% } %>
         <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+        <!--CDN样式-->
         <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+        <!--本地样式-->
         <!--<script src="<%= themeConfig.domain %>/media/script/tocbot.min.js"></script>
         <script src="<%= themeConfig.domain %>/media/script/script.min.js"></script>
         <script src="<%= themeConfig.domain %>/media/script/icon.min.js"></script>-->

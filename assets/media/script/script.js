@@ -180,13 +180,15 @@ function CheckVersion() {
                     hitokoto.innerText = "因为新版本特性,请重新点击下主题->自定义配置->保存 或参考最新的README.md";
                 }
                 if (data.tag_name != version) {
-                    console.log("🎉Current Theme Version: " + version);
-                    hitokoto.innerText = "请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
+                    console.log("🎉 Current Theme Version: " + version);
+                    hitokoto.innerText = "请及时更新当前版本：" + version + " 最新版本为：" + data.tag_name;
+                    console.log("🎉 更新内容: " + data.body);
                 } else
                     console.log("\n %c 🎉 Current Theme Version: " + version + " Latest Version: " + data.tag_name + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
             } else if ((update == "off") && patt.test(data.body)) {
-                console.log("🎉Current Theme Version: " + version);
-                hitokoto.innerText = "有重大更新，请及时更新当前版本为：" + version + " 最新版本为：" + data.tag_name;
+                console.log("🎉 Current Theme Version: " + version);
+                hitokoto.innerText = "有重要更新,请及时更新当前版本：" + version + " 最新版本为：" + data.tag_name;
+                console.log("🎉 更新内容: " + data.body);
             }
         }
     }

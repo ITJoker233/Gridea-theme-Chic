@@ -40,30 +40,35 @@
 ## 📜未来计划
 
 - [x] 增加live2d
-- [x]  增加音乐插件
-- [ ] 增加关于我的页面?ヾ(•ω•`)o
+- [x] 增加音乐插件
+- [x] 增加搜索功能
+- [ ] 增加关于我的页面? ヾ(•ω•`)o (待定)
+- [ ] 增加天气插件? ヾ(•ω•`)o (待定)
+- [ ] 增加节日插件? ヾ(•ω•`)o (待定)
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.6.2
+## 📌当前版本：1.6.3
 
 1. (刚开始使用这个主题的请忽略这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号，(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
 3. 因此在旧版本的基础上的解决方法：```请重新启动Gridea客户端，然后点击下主题->自定义配置->主题版本->选择最新版本->保存```
-4. 音乐插件------(详细教程见:https://blog.itjoker.cn/post/azQ6rNbFG/)
+4. 音乐插件------(详细教程见:https://blog.itjoker.cn/post/azQ6rNbFG/) (该功能慎用,影响目录跳转功能)
 5. 文章列表------在菜单里面添加的link为:```/posts```
+6. 如果不想使用CDN的话,那么找到head.ejs中,找到CDN样式的关键词,把下面的注释掉,然后取消掉本地样式关键词下的样式...
 
 ## 🌈下载地址
 
 <details>
 <summary>当前版本</summary>
 
-- [v1.6.2(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.2)
+- [v1.6.3(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.3)
 </details>
 
 <details>
 <summary>历史版本</summary>
 
+- [v1.6.2](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.2)
 - [v1.6.1](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.1)
 - [v1.6.0](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.0)
 - [v1.5.9](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.5.9)
@@ -87,16 +92,21 @@
 
 ## 🔖本次更新日志
 ### 本次更新了以下内容：
-1. 修复了live2d在Edge上无法显示的bug
-2. 下次更新未知....
-3. 本次更新时间为：2020.01.18
+1. 下次更新未知....
+2. 本次更新时间为：2020.01.30
+3. 排查了目录功能无法使用的原因,暂时无法解决,2333,具体等APlayer作者更新吧,或者让大佬你来也行,(逃,咕咕咕
+4. 增加了版权声明的开关,优化了语言切换的功能,修复了一个无关紧要的Bug...
+5. 增加了少量的模板注释
 
 ## 📢作者留言
 
 - 年底期间可能更新较慢或者不更新，如有Bug之类或者需求，请在[我的博客](https://blog.itjoker.cn/post/about/)留言或者提交Issue :)
+- 对已使用的用户,后续维护可能会迟缓，因为开发的环境转向 Arch Manjaro 系统,可能出现我无法使用客户端的可能，造成不能更新....🙃
+- 后续可能会出现大版本的更新,请及时更新主题，否则将有可能出现样式异常的可能...
+- 最近秃头严重....不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了
 
 ## 🔧安装方法
-
+i
 ```bash
 cd your-blog/themes
 git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
