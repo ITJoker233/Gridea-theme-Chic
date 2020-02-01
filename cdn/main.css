@@ -237,7 +237,7 @@
 }
 .dark-theme .post-item {
   background-color: #424242;
-  box-shadow: 1px 5px 10px -5px #444;
+  box-shadow: 1px 5px 16px -6px #444;
 }
 .dark-theme .post-item:hover {
   background-color: #e0e0e0;

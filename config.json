@@ -1,196 +1,9 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.6.3",
+    "version": "1.6.4",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
-    "customConfig": [{
-            "name": "language",
-            "label": "语言",
-            "group": "语言",
-            "value": "en",
-            "type": "select",
-            "options": [{
-                    "label": "English",
-                    "value": "en"
-                },
-                {
-                    "label": "中文",
-                    "value": "zh"
-                }
-            ]
-        },
-        {
-            "name": "friends",
-            "label": "友链",
-            "group": "友链",
-            "type": "array",
-            "value": [{
-                "description": "ITJoker's Blog",
-                "siteLink": "https://blog.itjoker.cn",
-                "siteLogo": "https://blog.itjoker.cn/images/avatar.png",
-                "siteName": "ITJoker"
-            }],
-            "arrayItems": [{
-                    "label": "名称",
-                    "name": "siteName",
-                    "type": "input",
-                    "value": "",
-                    "note": "请输入站点名称"
-                },
-                {
-                    "label": "链接",
-                    "name": "siteLink",
-                    "type": "input",
-                    "value": "",
-                    "note": "请输入链接地址"
-                },
-                {
-                    "label": "Logo",
-                    "name": "siteLogo",
-                    "type": "input",
-                    "value": "",
-                    "note": "请输入Logo地址"
-                },
-                {
-                    "label": "描述",
-                    "name": "description",
-                    "type": "textarea",
-                    "value": "",
-                    "note": "请输入描述信息"
-                }
-            ],
-            "note": ""
-        },
-        {
-            "name": "version",
-            "label": "主题版本",
-            "group": "网站信息",
-            "value": "1.6.3",
-            "type": "select",
-            "options": [{
-                "label": "最新版本",
-                "value": "1.6.3"
-            }]
-        },
-        {
-            "name": "update",
-            "label": "更新提醒",
-            "group": "更新提醒",
-            "value": "on",
-            "type": "select",
-            "options": [{
-                    "label": "开",
-                    "value": "on"
-                },
-                {
-                    "label": "关",
-                    "value": "off"
-                }
-
-            ]
-        },
-        {
-            "name": "live2ddebug",
-            "label": "是否本地预览(同步时请关闭)",
-            "group": "Live2d",
-            "value": "off",
-            "type": "select",
-            "options": [{
-                    "label": "关",
-                    "value": "off"
-                },
-                {
-                    "label": "开",
-                    "value": "on"
-                }
-            ]
-        },
-        {
-            "name": "live2d",
-            "label": "Live2d开启状态",
-            "group": "Live2d",
-            "value": "on",
-            "type": "select",
-            "options": [{
-                    "label": "开",
-                    "value": "on"
-                },
-                {
-                    "label": "关",
-                    "value": "off"
-                }
-            ]
-        },
-        {
-            "name": "music_switch",
-            "label": "Music插件",
-            "group": "Music插件",
-            "value": "on",
-            "type": "select",
-            "options": [{
-                    "label": "开",
-                    "value": "on"
-                },
-                {
-                    "label": "关",
-                    "value": "off"
-                }
-            ]
-        },
-        {
-            "name": "music_tips",
-            "label": "详细教程见:https://blog.itjoker.cn/post/azQ6rNbFG/ (若使用，目录功能将无法使用，慎用~原因详见README.md)",
-            "group": "Music插件",
-            "type": "label"
-        },
-        {
-            "name": "copyright_switch",
-            "label": "版权声明",
-            "group": "版权声明",
-            "value": "on",
-            "type": "select",
-            "options": [{
-                    "label": "开",
-                    "value": "on"
-                },
-                {
-                    "label": "关",
-                    "value": "off"
-                }
-            ]
-        },
-        {
-            "name": "music_url",
-            "label": "歌曲的url地址",
-            "group": "Music插件",
-            "value": "",
-            "type": "input",
-            "note": "请输入歌曲的url地址"
-        },
-        {
-            "name": "music_pic",
-            "label": "歌曲的图片地址",
-            "group": "Music插件",
-            "value": "",
-            "type": "input",
-            "note": "请输入歌曲的图片地址"
-        },
-        {
-            "name": "music_name",
-            "label": "歌曲名",
-            "group": "Music插件",
-            "value": "",
-            "type": "input",
-            "note": "请输入歌曲名"
-        },
-        {
-            "name": "music_author",
-            "label": "歌曲的作者名",
-            "group": "Music插件",
-            "value": "",
-            "type": "input",
-            "note": "请输入歌曲的作者名"
-        },
+    "customConfig": [
         {
             "name": "author",
             "label": "博主名字",
@@ -214,6 +27,38 @@
             "value": "",
             "type": "input",
             "note": "请输入描述"
+        },
+        {
+            "name": "copyright_switch",
+            "label": "版权声明",
+            "group": "网站信息",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "icpinfo",
+            "label": "* 备案信息",
+            "group": "网站信息",
+            "value": "",
+            "type": "input",
+            "note": "请输入备案信息(没有备案可以不填写) 例:浙公网安备 3301040xxxxxxx号"
+        },
+        {
+            "name": "icpcode",
+            "label": "* 备案号",
+            "group": "网站信息",
+            "value": "",
+            "type": "input",
+            "note": "请输入备案号(没有备案可以不填写) 必须是数字 例:3301040xxxxxxx"
         },
         {
             "name": "rss",
@@ -304,6 +149,92 @@
             "note": "链接地址"
         },
         {
+            "name": "friends",
+            "label": "友链",
+            "group": "友链",
+            "type": "array",
+            "value": [{
+                "description": "ITJoker's Blog",
+                "siteLink": "https://blog.itjoker.cn",
+                "siteLogo": "https://blog.itjoker.cn/images/avatar.png",
+                "siteName": "ITJoker"
+            }],
+            "arrayItems": [{
+                    "label": "名称",
+                    "name": "siteName",
+                    "type": "input",
+                    "value": "",
+                    "note": "请输入站点名称"
+                },
+                {
+                    "label": "链接",
+                    "name": "siteLink",
+                    "type": "input",
+                    "value": "",
+                    "note": "请输入链接地址"
+                },
+                {
+                    "label": "Logo",
+                    "name": "siteLogo",
+                    "type": "input",
+                    "value": "",
+                    "note": "请输入Logo地址"
+                },
+                {
+                    "label": "描述",
+                    "name": "description",
+                    "type": "textarea",
+                    "value": "",
+                    "note": "请输入描述信息"
+                }
+            ],
+            "note": ""
+        },
+        {
+            "name": "version",
+            "label": "主题版本",
+            "group": "主题设置",
+            "value": "1.6.4",
+            "type": "select",
+            "options": [{
+                "label": "最新版本",
+                "value": "1.6.4"
+            }]
+        },
+        {
+            "name": "update",
+            "label": "更新提醒",
+            "group": "主题设置",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+
+            ]
+        },
+        {
+            "name": "language",
+            "label": "主题语言",
+            "group": "主题设置",
+            "value": "en",
+            "type": "select",
+            "options": [{
+                    "label": "English",
+                    "value": "en"
+                },
+                {
+                    "label": "中文",
+                    "value": "zh"
+                }
+            ]
+        },
+        {
             "name": "ga",
             "label": "跟踪 ID",
             "group": "谷歌统计",
@@ -315,6 +246,108 @@
             "name": "baidu",
             "label": "百度自动提交",
             "group": "百度自动提交",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "live2ddebug",
+            "label": "是否本地预览(同步时请关闭)",
+            "group": "Live2d插件",
+            "value": "off",
+            "type": "select",
+            "options": [{
+                    "label": "关",
+                    "value": "off"
+                },
+                {
+                    "label": "开",
+                    "value": "on"
+                }
+            ]
+        },
+        {
+            "name": "live2d",
+            "label": "Live2d开启状态",
+            "group": "Live2d插件",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "music",
+            "label": "Music插件",
+            "group": "Music插件",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "music_tips",
+            "label": "详细教程见:https://blog.itjoker.cn/post/azQ6rNbFG/ (若使用，目录功能将无法使用，慎用~原因详见README.md)",
+            "group": "Music插件",
+            "type": "label"
+        },
+        {
+            "name": "music_url",
+            "label": "歌曲的url地址",
+            "group": "Music插件",
+            "value": "",
+            "type": "input",
+            "note": "请输入歌曲的url地址"
+        },
+        {
+            "name": "music_pic",
+            "label": "歌曲的图片地址",
+            "group": "Music插件",
+            "value": "",
+            "type": "input",
+            "note": "请输入歌曲的图片地址"
+        },
+        {
+            "name": "music_name",
+            "label": "歌曲名",
+            "group": "Music插件",
+            "value": "",
+            "type": "input",
+            "note": "请输入歌曲名"
+        },
+        {
+            "name": "music_author",
+            "label": "歌曲的作者名",
+            "group": "Music插件",
+            "value": "",
+            "type": "input",
+            "note": "请输入歌曲的作者名"
+        },
+        {
+            "name": "sentence",
+            "label": "一言插件",
+            "group": "一言插件",
             "value": "on",
             "type": "select",
             "options": [{

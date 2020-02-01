@@ -31,7 +31,7 @@
 
 - 暂不支持MathJax，支持用LaTeX编写的公式。（由于Gridea客户端的原因，目前只支持```$$...$$```格式） (例)Example：```$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$```
 
-- 支持Live 2d
+- 支持Live 2d , 一言API,音乐播放器....
 
 - 友好的SEO
 
@@ -42,17 +42,18 @@
 - [x] 增加live2d
 - [x] 增加音乐插件
 - [x] 增加搜索功能
+- [x] 增加备案信息
 - [ ] 增加关于我的页面? ヾ(•ω•`)o (待定)
 - [ ] 增加天气插件? ヾ(•ω•`)o (待定)
 - [ ] 增加节日插件? ヾ(•ω•`)o (待定)
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.6.3
+## 📌当前版本：1.6.4
 
 1. (刚开始使用这个主题的请忽略这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号，(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
-3. 因此在旧版本的基础上的解决方法：```请重新启动Gridea客户端，然后点击下主题->自定义配置->主题版本->选择最新版本->保存```
+3. 因此在旧版本的基础上的解决方法：```请重新启动Gridea客户端，然后点击下主题->自定义配置->主题设置->选择最新版本->保存```
 4. 音乐插件------(详细教程见:https://blog.itjoker.cn/post/azQ6rNbFG/) (该功能慎用,影响目录跳转功能)
 5. 文章列表------在菜单里面添加的link为:```/posts```
 6. 如果不想使用CDN的话,那么找到head.ejs中,找到CDN样式的关键词,把下面的注释掉,然后取消掉本地样式关键词下的样式...
@@ -62,12 +63,13 @@
 <details>
 <summary>当前版本</summary>
 
-- [v1.6.3(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.3)
+- [v1.6.4(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.4)
 </details>
 
 <details>
 <summary>历史版本</summary>
 
+- [v1.6.3](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.3)
 - [v1.6.2](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.2)
 - [v1.6.1](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.1)
 - [v1.6.0](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.0)
@@ -93,10 +95,10 @@
 ## 🔖本次更新日志
 ### 本次更新了以下内容：
 1. 下次更新未知....
-2. 本次更新时间为：2020.01.30
-3. 排查了目录功能无法使用的原因,暂时无法解决,2333,具体等APlayer作者更新吧,或者让大佬你来也行,(逃,咕咕咕
-4. 增加了版权声明的开关,优化了语言切换的功能,修复了一个无关紧要的Bug...
-5. 增加了少量的模板注释
+2. 本次更新时间为：2020.02.01
+3. 增加了备案信息填写的功能,支持是否开启一言功能.
+4. 整合了一部分代码.
+5. 更新了搜索功能.
 
 ## 📢作者留言
 

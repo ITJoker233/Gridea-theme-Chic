@@ -4,7 +4,6 @@ function refineInfo(str){
    return str.replace(/(<(\/?)(\w+)[^>]*>)|(<!--[\s\S]*?-->)/g ,'')//去除html标签如<p></p>和注释
    .replace(/\s+/g,' ')//压缩空格换行等只保留一个空格
 }
-
 function outputInfo(){
    //全站信息
    let siteInfo={
@@ -12,7 +11,6 @@ function outputInfo(){
       tags:site.tags,
       menus:site.menus,
       themeConfig:site.themeConfig,
-      isHomepage:site.isHomepage,
       customConfig:site.customConfig,
       utils:site.utils//必选，不可更改
    };
@@ -37,7 +35,6 @@ site.posts.forEach(function(post, index){
       siteInfo.posts.push(postInfo);
    }
 })
-
 return JSON.stringify(siteInfo);
 }
 %>
