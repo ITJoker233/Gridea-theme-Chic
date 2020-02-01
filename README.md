@@ -108,7 +108,7 @@
 - 最近秃头严重....不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了
 
 ## 🔧安装方法
-i
+
 ```bash
 cd your-blog/themes
 git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
