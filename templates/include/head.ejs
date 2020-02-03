@@ -5,7 +5,6 @@
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="<%= themeConfig.domain %>">
-<link rel="dns-prefetch" href="https://cdn.bootcss.com">
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <meta name="author" content="<%= site.customConfig.author%>">
 <meta name="description" content="<%= site.customConfig.description%>">
@@ -15,7 +14,7 @@
 <!--本地样式-->
 <!--<link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/style.min.css" />-->
 <link rel="stylesheet" href="<%= themeConfig.domain %>/styles/main.css" />
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <% if (site.customConfig.music == "on") { %>
     <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
@@ -29,8 +28,8 @@
         <!--<script src="<%= themeConfig.domain %>/media/script/tocbot.min.js"></script>
         <script src="<%= themeConfig.domain %>/media/script/script.min.js"></script>
         <script src="<%= themeConfig.domain %>/media/script/icon.min.js"></script>-->
-        <script src="https://cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js"></script>
-        <link href="https://cdn.bootcss.com/highlight.js/9.13.1/styles/atelier-estuary-dark.min.css" rel="stylesheet">
+        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/atelier-estuary-dark.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
         <% if (site.customConfig.baidu) { %>
