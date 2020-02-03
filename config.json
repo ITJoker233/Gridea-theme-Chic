@@ -259,7 +259,7 @@
         },
         {
             "name": "weather",
-            "label": "是否本地预览(同步时请关闭)",
+            "label": "天气插件",
             "group": "天气插件",
             "value": "on",
             "type": "select",
