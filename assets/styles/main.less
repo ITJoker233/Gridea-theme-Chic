@@ -1,4 +1,28 @@
 @charset "UTF-8";
+/*pagination*/
+.pagination-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  .prev, .next {
+    display: flex;
+    align-items: center;
+    padding: 2px 8px;
+    background: linear-gradient(180deg,transparent 90%,rgba(101,125,225,.4) 0);
+  }
+  .prev {
+    
+    float: left;
+  }
+  .next {
+    margin-left: 20px;
+    float: left;
+  }
+}
+
 /*glitch*/
 .glitch {
   margin: auto;

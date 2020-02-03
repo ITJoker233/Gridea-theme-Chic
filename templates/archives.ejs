@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <%- include('./include/head', { siteTitle: themeConfig.siteName }) %>
 </head>
+
 <body>
     <div class="wrapper">
         <%- include('./include/header') %>
-        <div class="main">
-            <div class="post-wrap archive">
-                <% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
-                <% years.forEach(function(year) { %>
-                <h3><%- year %></h3>
-                <% posts.forEach(function(post) { %>
-                <%if (post.date.indexOf(year) !== -1) { %>
-                <article class="archive-item"><a class="archive-item-link" href="<%- post.link%>"><%= post.title %></a><span class="archive-item-date"><%= post.dateFormat %> </span></article><% } %><% }) %><% }) %>
+            <div class="main">
+                <div class="post-wrap archive">
+                    <% let years = []; posts.forEach((item) => { const year = item.date.substring(0, 4); if (!years.includes(year)) { years.push(year); } }); %>
+                        <% years.forEach(function(year) { %>
+                            <h3>
+                                <%- year %>
+                            </h3>
+                            <% posts.forEach(function(post) { %>
+                                <%if (post.date.indexOf(year) !== -1) { %>
+                                    <article class="archive-item">
+                                        <a class="archive-item-link" href="<%- post.link%>">
+                                            <%= post.title %>
+                                        </a><span class="archive-item-date"><%= post.dateFormat %> </span></article>
+                                    <% } %>
+                                        <% }) %>
+                                            <% }) %>
+                </div>
+                <div class="pagination-container">
+                    <% if(site.customConfig.language=="zh"){%>
+                        <% if (pagination.prev) { %>
+                            <a href="<%= pagination.prev %>" class="prev"><i class="icon-arrow-ios-back-outline"></i> &#x4E0A;&#x4E00;&#x9875;</a>
+                            <% } %>
+                                <% if (pagination.next) { %>
+                                    <a href="<%= pagination.next %>" class="next">&#x4E0B;&#x4E00;&#x9875; <i class="icon-arrow-ios-forward-outline"></i></a>
+                                    <% } %>
+                                        <% }else{ %>
+                                            <% if (pagination.prev) { %>
+                                                <a href="<%= pagination.prev %>" class="prev"><i class="icon-arrow-ios-back-outline"></i> Prev</a>
+                                                <% } %>
+                                                    <% if (pagination.next) { %>
+                                                        <a href="<%= pagination.next %>" class="next">Next <i class="icon-arrow-ios-forward-outline"></i></a>
+                                                        <% } %>
+                                                            <% } %>
+                </div>
             </div>
-        </div>
     </div>
     <%- include('./include/footer') %>
-    </div>
+        </div>
 </body>
+
 </html>
