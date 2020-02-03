@@ -44,12 +44,12 @@
 - [x] 增加搜索功能
 - [x] 增加备案信息
 - [ ] 增加关于我的页面? ヾ(•ω•`)o (待定)
-- [ ] 增加天气插件? ヾ(•ω•`)o (待定)
+- [x] 增加天气插件? ヾ(•ω•`)o (待定)
 - [ ] 增加节日插件? ヾ(•ω•`)o (待定)
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.6.4
+## 📌当前版本：1.6.5
 
 1. (刚开始使用这个主题的请忽略这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号，(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
@@ -63,12 +63,12 @@
 <details>
 <summary>当前版本</summary>
 
-- [v1.6.4(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.4)
+- [v1.6.5(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.5)
 </details>
 
 <details>
 <summary>历史版本</summary>
-
+- [v1.6.4](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.4)
 - [v1.6.3](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.3)
 - [v1.6.2](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.2)
 - [v1.6.1](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.1)
@@ -95,10 +95,10 @@
 ## 🔖本次更新日志
 ### 本次更新了以下内容：
 1. 下次更新未知....
-2. 本次更新时间为：2020.02.01
-3. 增加了备案信息填写的功能,支持是否开启一言功能.
-4. 整合了一部分代码.
-5. 更新了搜索功能.
+2. 本次更新时间为：2020.02.03
+3. 增加了天气插件
+4. 修复了文章列表重复的Bug
+5. 增加了归档列表的上下页切换的功能
 
 ## 📢作者留言
 
