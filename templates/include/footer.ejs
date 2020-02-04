@@ -61,19 +61,24 @@
                     <% if (site.customConfig.music == "on") { %>
 
                     function LoadPlayer() {
-                        var audio_name = '<%= site.customConfig.music_name%>';
-                        var audio_artist = '<%= site.customConfig.music_author%>';
-                        var audio_url = '<%= site.customConfig.music_url%>';
-                        var audio_cover = '<%= site.customConfig.music_pic%>';
+                        var music_array = [];
+                        <%site.customConfig.musics.forEach(function(music_item) { %>
+                            music_array.push({
+                                name : '<%=music_item.name%>',
+                                url : '<%=music_item.url%>',
+                                artist : '<%=music_item.auther%>',
+                                cover : '<%=music_item.pic%>',
+                            });
+                        <%}); %>
+                        console.log(music_array);
+                        var music_fixed = true;
+                        <% if (site.customConfig.music_fixed == "off") { %>
+                            music_fixed = false;
+                        <% } %>
                         const ap = new APlayer({
                             container: document.getElementById('player'),
-                            fixed: true,
-                            audio: [{
-                                name: audio_name,
-                                artist: audio_artist,
-                                url: audio_url,
-                                cover: audio_cover,
-                            }]
+                            fixed: music_fixed,
+                            audio: music_array
                         });
                     }
                     LoadPlayer();
