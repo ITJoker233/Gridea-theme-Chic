@@ -345,7 +345,7 @@
         },
         {
             "name": "music_model",
-            "label": "吸底 / Mini 模式",
+            "label": "吸底 / Mini / 普通 模式(建议吸底模式...其他的待测试)",
             "group": "Music插件",
             "value": "fixed",
             "type": "select",
