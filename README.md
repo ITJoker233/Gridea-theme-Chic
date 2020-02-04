@@ -31,7 +31,7 @@
 
 - 暂不支持MathJax，支持用LaTeX编写的公式。（由于Gridea客户端的原因，目前只支持```$$...$$```格式） (例)Example：```$$f(x) = a_1x^n + a_2x^{n-1} + a_3x^{n-2}$$```
 
-- 支持Live 2d , 一言API,音乐播放器....
+- 支持Live 2d , 一言API,音乐播放器(支持手动导入歌单)....
 
 - 友好的SEO
 
@@ -43,13 +43,13 @@
 - [x] 增加音乐插件
 - [x] 增加搜索功能
 - [x] 增加备案信息
+- [x] 增加天气插件? ヾ(•ω•`)o 
 - [ ] 增加关于我的页面? ヾ(•ω•`)o (待定)
-- [x] 增加天气插件? ヾ(•ω•`)o (待定)
 - [ ] 增加节日插件? ヾ(•ω•`)o (待定)
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.6.6
+## 📌当前版本：1.6.7
 
 1. (刚开始使用这个主题的请忽略这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号，(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
@@ -61,13 +61,14 @@
 ## 🔖本次更新日志
 ### 本次更新了以下内容：
 1. 下次更新未知....
-2. 本次更新时间为：2020.02.03
-3. 修复了天气插件显示异常...
+2. 本次更新时间为：2020.02.04
+3. 修复了天气插件和音乐插件显示冲突...
+4. 支持导入更多歌曲,建立自己的歌单 √
+5. 增加底部Powered By 显示设置的功能
 
 ## 📢作者留言
 
 - 年底期间可能更新较慢或者不更新，如有Bug之类或者需求，请在[我的博客](https://blog.itjoker.cn/post/about/)留言或者提交Issue :)
-- 对已使用的用户,后续维护可能会迟缓，因为开发的环境转向 Arch Manjaro 系统,可能出现我无法使用客户端的可能，造成不能更新....🙃
 - 后续可能会出现大版本的更新,请及时更新主题，否则将有可能出现样式异常的可能...
 - 最近秃头严重....不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了
 
@@ -81,7 +82,13 @@ git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
 git pull origin master
 ```
 
-# 如果上述方法网络不给力,或者没梯子....可以试试下面来下载
+## 🤝贡献人员
+
+- PS:只有提交有效的代码,没太大纰漏问题的都会出现在这
+
+1. [@ciwomuli](https://github.com/ciwomuli)
+
+## 如果上述方法网络不给力,或者没梯子....可以试试下面来下载
 
 ## 🌈下载地址
 
@@ -89,7 +96,7 @@ git pull origin master
 
 <summary> 当前版本 </summary>
 
-- [v1.6.6(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.6)
+- [v1.6.7(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.7)
 
 </details>
 
@@ -97,6 +104,7 @@ git pull origin master
 
 <summary> 历史版本 </summary>
 
+- [v1.6.6](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.6)
 - [v1.6.5](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.5)
 - [v1.6.4](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.4)
 - [v1.6.3](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.3)

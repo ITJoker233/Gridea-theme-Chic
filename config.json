@@ -1,6 +1,6 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.6.5",
+    "version": "1.6.7",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -209,11 +209,11 @@
             "name": "version",
             "label": "主题版本",
             "group": "主题设置",
-            "value": "1.6.5",
+            "value": "1.6.7",
             "type": "select",
             "options": [{
                 "label": "最新版本",
-                "value": "1.6.5"
+                "value": "1.6.7"
             }]
         },
         {
@@ -344,18 +344,22 @@
             "type": "label"
         },
         {
-            "name": "music_fixed",
-            "label": "将Music插件固定在屏幕下方",
+            "name": "music_model",
+            "label": "吸底 / Mini 模式",
             "group": "Music插件",
-            "value": "on",
+            "value": "fixed",
             "type": "select",
             "options": [{
-                    "label": "开",
-                    "value": "on"
+                    "label": "吸底模式",
+                    "value": "fixed"
                 },
                 {
-                    "label": "关",
-                    "value": "off"
+                    "label": "Mini模式",
+                    "value": "mini"
+                },
+                {
+                    "label": "普通模式",
+                    "value": "normal"
                 }
             ]
         },
@@ -370,34 +374,35 @@
                 "siteLogo": "",
                 "siteName": ""
             }],
-            "arrayItems": [{  
-                "name": "url",
-                "label": "歌曲的url地址",
-                "value": "",
-                "type": "input",
-                "note": "请输入歌曲的url地址"
-            },
-            {
-                "name": "pic",
-                "label": "歌曲的图片地址",
-                "value": "",
-                "type": "input",
-                "note": "请输入歌曲的图片地址"
-            },
-            {
-                "name": "name",
-                "label": "歌曲名",
-                "value": "",
-                "type": "input",
-                "note": "请输入歌曲名"
-            },
-            {
-                "name": "author",
-                "label": "歌曲的作者名",
-                "value": "",
-                "type": "input",
-                "note": "请输入歌曲的作者名"
-            }]
+            "arrayItems": [{
+                    "name": "url",
+                    "label": "歌曲的url地址",
+                    "value": "",
+                    "type": "input",
+                    "note": "请输入歌曲的url地址"
+                },
+                {
+                    "name": "pic",
+                    "label": "歌曲的图片地址",
+                    "value": "",
+                    "type": "input",
+                    "note": "请输入歌曲的图片地址"
+                },
+                {
+                    "name": "name",
+                    "label": "歌曲名",
+                    "value": "",
+                    "type": "input",
+                    "note": "请输入歌曲名"
+                },
+                {
+                    "name": "author",
+                    "label": "歌曲的作者名",
+                    "value": "",
+                    "type": "input",
+                    "note": "请输入歌曲的作者名"
+                }
+            ]
         },
         {
             "name": "sentence",
