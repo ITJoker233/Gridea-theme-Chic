@@ -58,16 +58,44 @@
 5. 文章列表------在菜单里面添加的link为:```/posts```
 6. 如果不想使用CDN的话,那么找到head.ejs中,找到CDN样式的关键词,把下面的注释掉,然后取消掉本地样式关键词下的样式...
 
+## 🔖本次更新日志
+### 本次更新了以下内容：
+1. 下次更新未知....
+2. 本次更新时间为：2020.02.03
+3. 修复了天气插件显示异常...
+
+## 📢作者留言
+
+- 年底期间可能更新较慢或者不更新，如有Bug之类或者需求，请在[我的博客](https://blog.itjoker.cn/post/about/)留言或者提交Issue :)
+- 对已使用的用户,后续维护可能会迟缓，因为开发的环境转向 Arch Manjaro 系统,可能出现我无法使用客户端的可能，造成不能更新....🙃
+- 后续可能会出现大版本的更新,请及时更新主题，否则将有可能出现样式异常的可能...
+- 最近秃头严重....不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了
+
+## 🔧使用方法
+
+```bash
+# 安装方法
+cd your-blog/themes
+git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
+# 更新方法
+git pull origin master
+```
+
+# 如果上述方法网络不给力,或者没梯子....可以试试下面来下载
+
 ## 🌈下载地址
 
 <details>
-<summary>当前版本</summary>
+
+<summary> 当前版本 </summary>
 
 - [v1.6.6(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.6)
+
 </details>
 
 <details>
-<summary>历史版本</summary>
+
+<summary> 历史版本 </summary>
 
 - [v1.6.5](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.5)
 - [v1.6.4](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.4)
@@ -92,30 +120,15 @@
 - [v1.4.5](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.5)
 - [v1.4.3](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.3)
 - [v1.4.2](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.2)
+
 </details>
 
-## 🔖本次更新日志
-### 本次更新了以下内容：
-1. 下次更新未知....
-2. 本次更新时间为：2020.02.03
-3. 修复了天气插件显示异常...
-
-## 📢作者留言
-
-- 年底期间可能更新较慢或者不更新，如有Bug之类或者需求，请在[我的博客](https://blog.itjoker.cn/post/about/)留言或者提交Issue :)
-- 对已使用的用户,后续维护可能会迟缓，因为开发的环境转向 Arch Manjaro 系统,可能出现我无法使用客户端的可能，造成不能更新....🙃
-- 后续可能会出现大版本的更新,请及时更新主题，否则将有可能出现样式异常的可能...
-- 最近秃头严重....不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了
-
-## 🔧安装方法
-
-```bash
-cd your-blog/themes
-git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
-```
 - <font color='red'>需要在主题的设置里面的自定义设置中设置好网站信息，否则会有可能报错</font>
 
 ## 如果你喜欢的话可以给个Star✨ <font color='red'>如果你想赞助的话，可以联系作者~2333 联系方式在博客</font>
 
+### 点赞是更新动力,赞助是更新的强心针!✨
+
 ## 📃开源协议
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

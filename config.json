@@ -190,6 +190,22 @@
             "note": ""
         },
         {
+            "name": "platform_name",
+            "label": "Powered By 名称",
+            "group": "主题设置",
+            "value": "Coding.net",
+            "type": "input",
+            "note": "请输入平台的名称"
+        },
+        {
+            "name": "platform_link",
+            "label": "Powered By 链接",
+            "group": "主题设置",
+            "value": "https://coding.net",
+            "type": "input",
+            "note": "请输入平台的链接"
+        },
+        {
             "name": "version",
             "label": "主题版本",
             "group": "主题设置",
@@ -398,22 +414,6 @@
                     "value": "off"
                 }
             ]
-        },
-        {
-            "name" : "platform_name",
-            "label": "平台名称",
-            "group": "平台",
-            "value": "Coding.net",
-            "type": "input",
-            "note": "请输入平台的名称"
-        },
-        {
-            "name" : "platform_link",
-            "label": "平台链接",
-            "group": "平台",
-            "value": "https://coding.net",
-            "type": "input",
-            "note": "请输入平台的链接"
         }
     ]
 }
