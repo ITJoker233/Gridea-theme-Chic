@@ -87,7 +87,7 @@ git pull origin master
 
 <details>
 
-<summary>当前版本</summary>
+<summary> 当前版本 </summary>
 
 - [v1.6.6(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.6)
 
@@ -95,7 +95,7 @@ git pull origin master
 
 <details>
 
-<summary>历史版本</summary>
+<summary> 历史版本 </summary>
 
 - [v1.6.5](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.5)
 - [v1.6.4](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.4)
@@ -120,6 +120,7 @@ git pull origin master
 - [v1.4.5](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.5)
 - [v1.4.3](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.3)
 - [v1.4.2](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.4.2)
+
 </details>
 
 - <font color='red'>需要在主题的设置里面的自定义设置中设置好网站信息，否则会有可能报错</font>
