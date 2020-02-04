@@ -2,7 +2,6 @@
     <div id="player"></div>
     <% } %>
         <footer id="footer" class="footer">
-
             <div class="copyright">
                 <div class="Like">
                     <div class="tip" data-tooltip="Do you like it?">
@@ -70,7 +69,7 @@
                             cover: '<%=music_item.pic%>',
                         });
                         <%}); %>
-                        console.log(music_array);
+                        console.log(" MusicList: " + music_array);
                         <% if (site.customConfig.music_model == "fixed") { %>
                         const ap = new APlayer({
                             container: document.getElementById('player'),
@@ -140,12 +139,16 @@
                         }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
                     </script>
                     <script>
+                        var wearther_margin = "10px 10px";
+                        <% if (site.customConfig.music == "on") { %>
+                        wearther_margin = "70px 5px";
+                        <%}%>
                         tpwidget("init", {
                             "flavor": "bubble",
                             "location": "WX4FBXXFKE4F",
                             "geolocation": "enabled",
                             "position": "bottom-left",
-                            "margin": "70px 5px",
+                            "margin": wearther_margin,
                             "language": "zh-chs",
                             "unit": "c",
                             "theme": "chameleon",
