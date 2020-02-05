@@ -36,9 +36,8 @@
                                 <a href="<%- tag.link %>"><%- tag.name %></a>
                                 <% }); %>
                             </span>
-                            <% } %>
-                            <% if (site.customConfig.view_count == "on") { %>
-                            View:
+                            <% }if (site.customConfig.view == "on") { %>
+                            Views:
                             <span data-hk-page="current"> - </span>
                             <% } %>
                         </div>
@@ -60,9 +59,8 @@
                                 <a href="<%- tag.link %>"><%- tag.name %></a>
                                 <% }); %>
                             </span>
-                            <% } %>
-                            <% if (site.customConfig.view_count == "on") { %>
-                            访问量:
+                            <% } if (site.customConfig.view == "on") { %>
+                            阅读量:
                             <span data-hk-page="current"> - </span>
                             <% } %>
                         </div>
@@ -74,7 +72,7 @@
             <div class="post-toc">
                 <%- post.toc %>
             </div>
-            <% if(site.customConfig.copyright_switch =="on"){%>
+            <% if(site.customConfig.copyright =="on"){%>
             <% if(site.customConfig.language==="en"){%>
             <!--en-->
             <section class="post-copyright en">
