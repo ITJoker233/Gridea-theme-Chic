@@ -2,7 +2,6 @@
     <div id="player"></div>
     <% } %>
         <footer id="footer" class="footer">
-
             <div class="copyright">
                 <div class="Like">
                     <div class="tip" data-tooltip="Do you like it?">
@@ -36,7 +35,7 @@
                                                     var date = new Date();
                                                     document.write("" + date.getFullYear());
                                                 </script>
-                                                | Powered by <a href= <%= site.customConfig.platform_link%>  target="_blank"><%= site.customConfig.platform_name%></a>
+                                                | Powered by <a href=< %=s ite.customConfig.platform_link%>  target="_blank"><%= site.customConfig.platform_name%></a>
             </div>
             <div id="update" style="display:none;">
                 <%= site.customConfig.update%>
@@ -63,23 +62,32 @@
                     function LoadPlayer() {
                         var music_array = [];
                         <%site.customConfig.musics.forEach(function(music_item) { %>
-                            music_array.push({
-                                name : '<%=music_item.name%>',
-                                url : '<%=music_item.url%>',
-                                artist : '<%=music_item.auther%>',
-                                cover : '<%=music_item.pic%>',
-                            });
+                        music_array.push({
+                            name: '<%=music_item.name%>',
+                            url: '<%=music_item.url%>',
+                            artist: '<%=music_item.auther%>',
+                            cover: '<%=music_item.pic%>',
+                        });
                         <%}); %>
-                        console.log(music_array);
-                        var music_fixed = true;
-                        <% if (site.customConfig.music_fixed == "off") { %>
-                            music_fixed = false;
-                        <% } %>
+                        console.log(" MusicList: " + music_array);
+                        <% if (site.customConfig.music_model == "fixed") { %>
                         const ap = new APlayer({
                             container: document.getElementById('player'),
-                            fixed: music_fixed,
+                            fixed: true,
                             audio: music_array
                         });
+                        <% } else if(site.customConfig.music_model == "mini"){%>
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            mini: true,
+                            audio: music_array
+                        });
+                        <%}else{%>
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            audio: music_array
+                        });
+                        <%}%>
                     }
                     LoadPlayer();
                     <% } %>
@@ -131,12 +139,16 @@
                         }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
                     </script>
                     <script>
+                        var wearther_margin = "10px 10px";
+                        <% if (site.customConfig.music == "on") { %>
+                        wearther_margin = "70px 5px";
+                        <%}%>
                         tpwidget("init", {
                             "flavor": "bubble",
                             "location": "WX4FBXXFKE4F",
                             "geolocation": "enabled",
                             "position": "bottom-left",
-                            "margin": "10px 10px",
+                            "margin": wearther_margin,
                             "language": "zh-chs",
                             "unit": "c",
                             "theme": "chameleon",
