@@ -304,6 +304,22 @@
             ]
         },
         {
+            "name": "view_count",
+            "label": "访问量统计",
+            "group": "访问量统计",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
             "name": "weather",
             "label": "天气插件",
             "group": "天气插件",
