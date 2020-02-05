@@ -148,6 +148,36 @@
             "note": "链接地址"
         },
         {
+            "name": "other_links",
+            "label": "其他",
+            "group": "社交",
+            "type": "array",
+            "value": [],
+            "arrayItems": [{
+                    "label": "名称",
+                    "name": "siteName",
+                    "type": "input",
+                    "value": "",
+                    "note": "请输入站点名称"
+                },
+                {
+                    "label": "链接",
+                    "name": "siteLink",
+                    "type": "input",
+                    "value": "",
+                    "note": "请输入链接地址"
+                },
+                {
+                    "label": "Logo",
+                    "name": "siteLogo",
+                    "type": "input",
+                    "value": "",
+                    "note": "请输入Logo地址"
+                }
+            ],
+            "note": "用于其他社交链接"
+        },
+        {
             "name": "friends",
             "label": "友链",
             "group": "友链",
@@ -261,6 +291,22 @@
             "name": "baidu",
             "label": "百度自动提交",
             "group": "百度自动提交",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "view_count",
+            "label": "访问量统计",
+            "group": "访问量统计",
             "value": "on",
             "type": "select",
             "options": [{
