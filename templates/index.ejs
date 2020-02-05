@@ -26,7 +26,10 @@
                                 <% if (site.customConfig[item]) { %>
                                     <a class="link-item" href="<%= site.customConfig[item] %>" title="<%- item %>"><i class="fa fa-<%= item %>"></i></a>
                                     <% } %>
-                                        <% }); %>
+                            <% }); %>
+                            <% site.customConfig.other_links.forEach((item) => { %>
+                                <a class="link-item" href="<%= item.siteLink %>" title="<%= item.siteName %>"><img src = <%= item.siteLogo %> width="29" height="29"></a>
+                            <% }); %>
                         </div>
                     </div>
                 </div>
