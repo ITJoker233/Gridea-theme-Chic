@@ -20,47 +20,48 @@
     <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
     <% } %>
-<% if (site.customConfig.view == "on") { %>
-    <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
-    <script src="https://jerryz.sgp1.cdn.digitaloceanspaces.com/lib/hit-kounter/hit-kounter-lc-0.3.0.js"></script>
-    <% } %>
-        <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
-        <!--CDN样式-->
-        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
-        <!--本地样式-->
-        <!--<script src="<%= themeConfig.domain %>/media/script/tocbot.min.js"></script>
+        <% if (site.customConfig.view == "on") { %>
+            <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/cdn/hit-kounter-lc-0.3.0.js"></script>
+            <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+            <!--<script src="https://jerryz.sgp1.cdn.digitaloceanspaces.com/lib/hit-kounter/hit-kounter-lc-0.3.0.js"></script>-->
+            <% } %>
+                <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+                <!--CDN样式-->
+                <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/tocbot.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/script.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/icon.min.js"></script>
+                <!--本地样式-->
+                <!--<script src="<%= themeConfig.domain %>/media/script/tocbot.min.js"></script>
         <script src="<%= themeConfig.domain %>/media/script/script.min.js"></script>
         <script src="<%= themeConfig.domain %>/media/script/icon.min.js"></script>-->
-        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/atelier-estuary-dark.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
-        <% if (site.customConfig.baidu) { %>
-            <script>
-                (function() {
-                    var bp = document.createElement('script');
-                    var curProtocol = window.location.protocol.split(':')[0];
-                    if (curProtocol === 'https') {
-                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-                    } else {
-                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-                    }
-                    var s = document.getElementsByTagName("script")[0];
-                    s.parentNode.insertBefore(bp, s);
-                })();
-            </script>
-            <% } %>
-                <% if (site.customConfig.ga) { %>
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
+                <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/atelier-estuary-dark.min.css">
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+                <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+                <% if (site.customConfig.baidu) { %>
                     <script>
-                        window.dataLayer = window.dataLayer || [];
-
-                        function gtag() {
-                            dataLayer.push(arguments);
-                        }
-                        gtag('js', new Date());
-                        gtag('config', '<%= site.customConfig.ga %>');
+                        (function() {
+                            var bp = document.createElement('script');
+                            var curProtocol = window.location.protocol.split(':')[0];
+                            if (curProtocol === 'https') {
+                                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                            } else {
+                                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                            }
+                            var s = document.getElementsByTagName("script")[0];
+                            s.parentNode.insertBefore(bp, s);
+                        })();
                     </script>
                     <% } %>
+                        <% if (site.customConfig.ga) { %>
+                            <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
+                            <script>
+                                window.dataLayer = window.dataLayer || [];
+
+                                function gtag() {
+                                    dataLayer.push(arguments);
+                                }
+                                gtag('js', new Date());
+                                gtag('config', '<%= site.customConfig.ga %>');
+                            </script>
+                            <% } %>
