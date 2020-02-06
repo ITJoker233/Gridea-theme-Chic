@@ -44,8 +44,8 @@
 - [x] 增加搜索功能
 - [x] 增加备案信息
 - [x] 增加天气插件
+- [x] 增加访问量功能? ヾ(•ω•`)o (待定)
 - [ ] 增加文章加密解密功能? ヾ(•ω•`)o (待定) (本功能需要客户端支持)
-- [ ] 增加访问量功能? ヾ(•ω•`)o (待定)
 - [ ] 增加付费文章功能? ヾ(•ω•`)o (待定)(本功能需要客户端支持)
 - [ ] 增加文章分享功能? ヾ(•ω•`)o (待定)
 - [ ] 增加关于我的页面? ヾ(•ω•`)o (待定)
@@ -54,7 +54,7 @@
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.6.7
+## 📌当前版本：1.6.8
 
 1. (刚开始使用这个主题的请忽略这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号.(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
@@ -64,12 +64,14 @@
 6. 如果不想使用CDN的话,那么找到head.ejs中,找到CDN样式的关键词,把下面的注释掉,然后取消掉本地样式关键词下的样式...
 
 ## 🔖本次更新日志
-### 本次更新了以下内容：
+
+### 本次更新了以下内容:
+
 1. 下次更新未知....
-2. 本次更新时间为：2020.02.04
-3. 修复了天气插件和音乐插件显示冲突...
-4. 支持导入更多歌曲,建立自己的歌单 √
-5. 增加底部Powered By 显示设置的功能
+2. 本次更新时间为：2020.02.06
+3. 增加了访问量的功能
+4. 优化了访问量插件js的CDN加载
+5. 修复了一些命名问题...
 
 ## 📢作者留言
 
@@ -95,7 +97,7 @@ git pull origin master
 
 1. [@ciwomuli](https://github.com/ciwomuli)
 
-## 如果上述方法网络不给力,或者没梯子....可以试试下面来下载
+- 如果上述方法网络不给力,或者没梯子....可以试试下面来下载
 
 ## 🌈下载地址
 
@@ -103,7 +105,7 @@ git pull origin master
 
 <summary> 当前版本 </summary>
 
-- [v1.6.7(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.7)
+- [v1.6.8(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.8)
 
 </details>
 
@@ -111,6 +113,7 @@ git pull origin master
 
 <summary> 历史版本 </summary>
 
+- [v1.6.7(https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.7)
 - [v1.6.6](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.6)
 - [v1.6.5](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.5)
 - [v1.6.4](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.4)
