@@ -6,7 +6,7 @@
 
 > Chic , 在法语中的意思是别致...
 <p align="center">
-<img alt="作者:Sirice，二次修改：ITJoker" src="https://github.com/ITJoker233/Gridea-theme-Chic"/>
+<a alt="作者:Sirice，二次修改：ITJoker" href="https://github.com/ITJoker233/Gridea-theme-Chic">作者:Sirice，二次修改：ITJoker</a>
 </p>
 
 ## 🎈介绍
@@ -44,8 +44,8 @@
 - [x] 增加搜索功能
 - [x] 增加备案信息
 - [x] 增加天气插件
-- [x] 增加访问量功能? ヾ(•ω•`)o 
 - [ ] 增加文章加密解密功能? ヾ(•ω•`)o (待定) (本功能需要客户端支持)
+- [ ] 增加访问量功能? ヾ(•ω•`)o (待定)
 - [ ] 增加付费文章功能? ヾ(•ω•`)o (待定)(本功能需要客户端支持)
 - [ ] 增加文章分享功能? ヾ(•ω•`)o (待定)
 - [ ] 增加关于我的页面? ヾ(•ω•`)o (待定)
