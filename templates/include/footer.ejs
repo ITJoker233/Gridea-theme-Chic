@@ -3,39 +3,38 @@
     <% } %>
         <footer id="footer" class="footer">
             <div class="copyright">
-                <div class="Like">
-                    <div class="tip" data-tooltip="Do you like it?">
-                        <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                <% if (site.customConfig.support_author == "on") { %>
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
                         aria-hidden="true">
                         <use xlink:href="#like"></use>
                     </svg><b class="like_text" id="star"></b></a>
+                        </div>
                     </div>
-                </div>
-                <%- themeConfig.footerInfo %>
-                    <% if (site.customConfig.sentence == "on") { %>
-                        <b id="hitokoto"></b><br>
-                        <%}%>
-                            <% if (site.customConfig.icpcode != "") { %>
-                                <% if (site.customConfig.icpinfo != "") { %>
+                    <%}%>
+                        <%- themeConfig.footerInfo %>
+                            <% if (site.customConfig.sentence == "on") { %>
+                                <b id="hitokoto"></b><br>
+                                <%} if (site.customConfig.icpcode != "") {  if (site.customConfig.icpinfo != "") { %>
                                     <div style="width:300px;margin:0 auto; padding:0px 0;">
                                         <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= site.customConfig.icpcode%>" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
                                             <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
                                             <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"></p>
                                         </a>
                                     </div>
-                                    <%}%>
-                                        <%}%>
-                                            <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+                                    <%}}%>
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
             <path
                 d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
                 fill="#93b5cf"></path>
         </svg>
-                                            <%= themeConfig.siteName%> &copy;Copyright
-                                                <script>
-                                                    var date = new Date();
-                                                    document.write("" + date.getFullYear());
-                                                </script>
-                                                | Powered by <a href=< %=s ite.customConfig.platform_link%>  target="_blank"><%= site.customConfig.platform_name%></a>
+                                        <%= themeConfig.siteName%> &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by <a href=< %=s ite.customConfig.platform_link%>  target="_blank"><%= site.customConfig.platform_name%></a>
             </div>
             <div id="update" style="display:none;">
                 <%= site.customConfig.update%>
@@ -96,13 +95,10 @@
                     <% } %>
                     <% if (site.customConfig.sentence == "on") { %>
                     hitokoto();
-                    <% } %>
-                    <% if (site.customConfig.icpcode != "") { %>
-                    <% if (site.customConfig.icpinfo != "") { %>
+                    <% } if (site.customConfig.icpcode != "") {  if (site.customConfig.icpinfo != "") { %>
                     var icp = document.getElementById('icpinfo');
                     icp.innerText = "<%= site.customConfig.icpinfo%>";
-                    <%}%>
-                    <%}%>
+                    <%} }%>
                     getStar();
                     hljs.initHighlighting();
                     console.clear();

@@ -1,6 +1,6 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.6.8",
+    "version": "1.6.9",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -32,6 +32,22 @@
             "label": "版权声明",
             "group": "网站信息",
             "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "list",
+            "label": "目录显示",
+            "group": "网站信息",
+            "value": "off",
             "type": "select",
             "options": [{
                     "label": "开",
@@ -209,11 +225,11 @@
             "name": "version",
             "label": "主题版本",
             "group": "主题设置",
-            "value": "1.6.8",
+            "value": "1.6.9",
             "type": "select",
             "options": [{
                 "label": "最新版本",
-                "value": "1.6.8"
+                "value": "1.6.9"
             }]
         },
         {
@@ -249,6 +265,7 @@
                 }
             ]
         },
+
         {
             "name": "ga",
             "label": "跟踪 ID",
@@ -424,6 +441,70 @@
             "name": "sentence",
             "label": "一言插件",
             "group": "一言插件",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "donate",
+            "label": "赞助插件",
+            "group": "赞助插件",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "donate_wechat",
+            "label": "微信支付二维码链接",
+            "group": "赞助插件",
+            "value": "https://blog.itjoker.cn/wechat.jpg",
+            "type": "input",
+            "note": "请输入微信支付二维码链接(支持base64格式)"
+        },
+        {
+            "name": "donate_alipay",
+            "label": "支付宝收钱二维码链接",
+            "group": "赞助插件",
+            "value": "https://blog.itjoker.cn/alipay.jpg",
+            "type": "input",
+            "note": "请输入支付宝收钱二维码链接(支持base64格式)"
+        },
+        {
+            "name": "love_click_animation",
+            "label": "爱心点击特效",
+            "group": "点击特效插件",
+            "value": "on",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ]
+        },
+        {
+            "name": "support_author",
+            "label": "🎉支持作者",
+            "group": "🎉支持作者",
             "value": "on",
             "type": "select",
             "options": [{

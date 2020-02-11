@@ -1,4 +1,122 @@
 @charset "UTF-8";
+
+/*Reward*/
+.reward {
+  padding: 5px 0;
+  float: right;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.reward .reward-notice {
+  font-size: 18px;
+  line-height: 14px;
+  margin: 15px auto;
+  text-align: center
+}
+
+.reward .reward-button {
+  font-size: 14px;
+  line-height: 27.5px;
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  border: 1px solid #f1b60e;
+  border-radius: 50%;
+  background: #fccd60;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fccd60), color-stop(100%, #fbae12), color-stop(100%, #2989d8), color-stop(100%, #207cca));
+  background: -webkit-linear-gradient(top, #fccd60 0, #fbae12 100%, #2989d8 100%, #207cca 100%);
+  background: linear-gradient(to bottom, #fccd60 0, #fbae12 100%, #2989d8 100%, #207cca 100%)
+}
+
+.reward .reward-code {
+  position: absolute;
+  top: -230px;
+  left: 50%;
+  display: none;
+  width: 350px;
+  height: 200px;
+  margin-left: -195px;
+  padding: 15px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  box-shadow: 0 1px 1px 1px #efefef
+}
+
+.reward .reward-button:hover .reward-code {
+  display: block
+}
+
+.reward .reward-code span {
+  display: inline-block;
+  width: 150px;
+  height: 150px
+}
+
+.reward .reward-code span.alipay-code {
+  float: left
+}
+
+.reward .reward-code span.alipay-code a {
+  padding: 0
+}
+
+.reward .reward-code span.wechat-code {
+  float: right
+}
+
+.reward .reward-code img {
+  display: inline-block;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border: 0
+}
+
+.reward .reward-code b {
+  font-size: 14px;
+  line-height: 26px;
+  display: block;
+  margin: 0;
+  text-align: center;
+  color: #666
+}
+
+.reward .reward-code b.notice {
+  line-height: 2rem;
+  margin-top: -1rem;
+  color: #999
+}
+
+.reward .reward-code:after,
+.reward .reward-code:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent
+}
+
+.reward .reward-code:after {
+  bottom: -19px;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #fff
+}
+
+.reward .reward-code:before {
+  bottom: -20px;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #e6e6e6
+}
+
 /*pagination*/
 .pagination-container {
   overflow: hidden;
@@ -7,16 +125,20 @@
   max-width: 780px;
   margin: 0 auto;
   padding-top: 2rem;
-  .prev, .next {
+
+  .prev,
+  .next {
     display: flex;
     align-items: center;
     padding: 2px 8px;
-    background: linear-gradient(180deg,transparent 90%,rgba(101,125,225,.4) 0);
+    background: linear-gradient(180deg, transparent 90%, rgba(101, 125, 225, .4) 0);
   }
+
   .prev {
-    
+
     float: left;
   }
+
   .next {
     margin-left: 20px;
     float: left;
@@ -64,95 +186,112 @@
 
 @-webkit-keyframes glitch-loop-1 {
   0% {
-      clip: rect(36px, 9999px, 9px, 0)
+    clip: rect(36px, 9999px, 9px, 0)
   }
+
   25% {
-      clip: rect(25px, 9999px, 99px, 0)
+    clip: rect(25px, 9999px, 99px, 0)
   }
+
   50% {
-      clip: rect(50px, 9999px, 102px, 0)
+    clip: rect(50px, 9999px, 102px, 0)
   }
+
   75% {
-      clip: rect(30px, 9999px, 92px, 0)
+    clip: rect(30px, 9999px, 92px, 0)
   }
+
   100% {
-      clip: rect(91px, 9999px, 98px, 0)
+    clip: rect(91px, 9999px, 98px, 0)
   }
 }
 
 @keyframes glitch-loop-1 {
   0% {
-      clip: rect(36px, 9999px, 9px, 0)
+    clip: rect(36px, 9999px, 9px, 0)
   }
+
   25% {
-      clip: rect(25px, 9999px, 99px, 0)
+    clip: rect(25px, 9999px, 99px, 0)
   }
+
   50% {
-      clip: rect(50px, 9999px, 102px, 0)
+    clip: rect(50px, 9999px, 102px, 0)
   }
+
   75% {
-      clip: rect(30px, 9999px, 92px, 0)
+    clip: rect(30px, 9999px, 92px, 0)
   }
+
   100% {
-      clip: rect(91px, 9999px, 98px, 0)
+    clip: rect(91px, 9999px, 98px, 0)
   }
 }
 
 @-webkit-keyframes glitch-loop-2 {
   0% {
-      top: -1px;
-      left: 1px;
-      clip: rect(65px, 9999px, 119px, 0)
+    top: -1px;
+    left: 1px;
+    clip: rect(65px, 9999px, 119px, 0)
   }
+
   25% {
-      top: -6px;
-      left: 4px;
-      clip: rect(79px, 9999px, 19px, 0)
+    top: -6px;
+    left: 4px;
+    clip: rect(79px, 9999px, 19px, 0)
   }
+
   50% {
-      top: -3px;
-      left: 2px;
-      clip: rect(68px, 9999px, 11px, 0)
+    top: -3px;
+    left: 2px;
+    clip: rect(68px, 9999px, 11px, 0)
   }
+
   75% {
-      top: 0;
-      left: -4px;
-      clip: rect(95px, 9999px, 53px, 0)
+    top: 0;
+    left: -4px;
+    clip: rect(95px, 9999px, 53px, 0)
   }
+
   100% {
-      top: -1px;
-      left: -1px;
-      clip: rect(31px, 9999px, 149px, 0)
+    top: -1px;
+    left: -1px;
+    clip: rect(31px, 9999px, 149px, 0)
   }
 }
 
 @keyframes glitch-loop-2 {
   0% {
-      top: -1px;
-      left: 1px;
-      clip: rect(65px, 9999px, 119px, 0)
+    top: -1px;
+    left: 1px;
+    clip: rect(65px, 9999px, 119px, 0)
   }
+
   25% {
-      top: -6px;
-      left: 4px;
-      clip: rect(79px, 9999px, 19px, 0)
+    top: -6px;
+    left: 4px;
+    clip: rect(79px, 9999px, 19px, 0)
   }
+
   50% {
-      top: -3px;
-      left: 2px;
-      clip: rect(68px, 9999px, 11px, 0)
+    top: -3px;
+    left: 2px;
+    clip: rect(68px, 9999px, 11px, 0)
   }
+
   75% {
-      top: 0;
-      left: -4px;
-      clip: rect(95px, 9999px, 53px, 0)
+    top: 0;
+    left: -4px;
+    clip: rect(95px, 9999px, 53px, 0)
   }
+
   100% {
-      top: -1px;
-      left: -1px;
-      clip: rect(31px, 9999px, 149px, 0)
+    top: -1px;
+    left: -1px;
+    clip: rect(31px, 9999px, 149px, 0)
   }
 }
+
 /*Like*/
 .Like {
   width: 100px;
@@ -322,7 +461,6 @@
   -webkit-transform: translateY(-8px);
   transform: translateY(-8px);
 }
-
 .post-item {
   display: flex;
   border-radius: 5px;
@@ -454,6 +592,7 @@
     padding: 1px 0px 0px 0px;
     line-height: 1.2em;
     letter-spacing: 0.05em;
+
     &:before {
       content: "";
       position: absolute;

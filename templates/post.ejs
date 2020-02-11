@@ -8,178 +8,220 @@
 <body>
     <div class="wrapper">
         <%- include('./include/header') %>
-        <div class="main">
-            <div class="container">
-                <article class="post-wrap">
-                    <header class="post-header">
-                        <h1 class="post-title">
-                            <%= post.title %>
-                        </h1>
-                        <% if(site.customConfig.language=="en"){%>
-                        <!--en-->
-                        <div class="post-meta en">
-                            Author:
-                            <a itemprop="author" rel="author" href="/">
-                                <%- themeConfig.siteName %>
-                            </a>
-                            <span class="post-time">
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                <%= post.title %>
+                            </h1>
+                            <% if(site.customConfig.language=="en"){%>
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        <%- themeConfig.siteName %>
+                                    </a>
+                                    <span class="post-time">
                                 Date: <a href="#"><%= post.dateFormat %></a>
                             </span>
-                            <span class="post-readtime">Reading Time:<a
+                                    <span class="post-readtime">Reading Time:<a
                                     href="#"><%= (parseFloat(post.stats.time)/60.0/1000.0).toFixed(1).toString()%>
                                     mins</a></span>
-                            <span class="post-words">words:<a href="#"><%= post.stats.words%></a></span>
-                            <% if(post.tags.length!==0){ %>
-                            <span class="post-category">
+                                    <span class="post-words">words:<a href="#"><%= post.stats.words%></a></span>
+                                    <% if(post.tags.length!==0){ %>
+                                        <span class="post-category">
                                 Category:
                                 <% post.tags.forEach(function(tag) { %>
                                 <a href="<%- tag.link %>"><%- tag.name %></a>
                                 <% }); %>
                             </span>
-                            <% }if (site.customConfig.view == "on") { %>
-                            Views:
-                            <span data-hk-page="current"> - </span>
-                            <% } %>
-                        </div>
-                        <%}else{%>
-                        <!--zh-->
-                        <div class="post-meta zh">
-                            &#x4F5C;&#x8005;:
-                            <a itemprop="author" rel="author" href="/">
-                                <%- themeConfig.siteName %>
-                            </a>
-                            <span class="post-time">&#x65E5;&#x671F;: <a href="#"><%= post.dateFormat %></a></span>
-                            <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                        <% }if (site.customConfig.view == "on") { %>
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            <% } %>
+                                </div>
+                                <%}else{%>
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            <%- themeConfig.siteName %>
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#"><%= post.dateFormat %></a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
                                     href="#"><%= (parseFloat(post.stats.time)/60.0/1000.0).toFixed(1).toString()%>
                                     &#x5206;&#x949F;</a></span>
-                            <span class="post-words">&#x5B57;&#x6570;:<a href="#"><%= post.stats.words%></a></span>
-                            <% if(post.tags.length!==0){ %>
-                            <span class="post-category">&#x5206;&#x7C7B;:
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#"><%= post.stats.words%></a></span>
+                                        <% if(post.tags.length!==0){ %>
+                                            <span class="post-category">&#x5206;&#x7C7B;:
                                 <% post.tags.forEach(function(tag) { %>
                                 <a href="<%- tag.link %>"><%- tag.name %></a>
                                 <% }); %>
                             </span>
-                            <% } if (site.customConfig.view == "on") { %>
-                            阅读量:
-                            <span data-hk-page="current"> - </span>
-                            <% } %>
-                        </div>
-                        <%}%>
+                                            <% } if (site.customConfig.view == "on") { %>
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                <% } %>
+                                    </div>
+                                    <%}%>
                         </header>
                         <div class="post-content">
                             <%- post.content %>
+                        </div>
+                        <% if(site.customConfig.list =="on"){%>
+                            <div class="post-toc">
+                                <%- post.toc %>
+                            </div>
+                            <%}%>
+                                <% if(site.customConfig.copyright =="on"){%>
+                                    <% if(site.customConfig.language==="en"){%>
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span><%- themeConfig.siteName %></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="<%- post.link  %>"><%- post.link %></a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        <%}else{%>
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span><%- themeConfig.siteName %></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="<%- post.link  %>"><%- post.link %></a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            <%}%>
+                                                <%}%>
+                                                    <% if(site.customConfig.language==='en'){%>
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= post.link %>"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%= post.link %>&sharesource=qzone&title=<%= post.title %>&pics=https://blog.blinkstar.cn/images/avatar.png&summary=<%= post.abstract %>"><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=<%= post.link %>&sharesource=weibo&title=<%= post.title%> + " - " + <%= post.abstract %>&pic="https://blog.blinkstar.cn/images/avatar.png "><i class="fa fa-weibo "></i></a>
+                                                <% if(site.customConfig.donate==='on'){%>
+                                                    <div class="reward ">
+                                                        <div class="reward-button ">&yen;
+                                                            <span class="reward-code "> 
+                                                                <span class="alipay-code "> <img class="alipay-img " alt = "support " src="<%=site.customConfig.donate_alipay%>"><b>Alipay</b> </span>
+                                                        <span class="wechat-code "> <img alt ="support " class="wechat-img " src="<%=site.customConfig.donate_wechat%>"><b>Wechat</b> </span> </span>
+                </div>
             </div>
-            <div class="post-toc">
-                <%- post.toc %>
-            </div>
-            <% if(site.customConfig.copyright =="on"){%>
-            <% if(site.customConfig.language==="en"){%>
-            <!--en-->
-            <section class="post-copyright en">
-                <p class="copyright-item">
-                    <span>Author:</span>
-                    <span><%- themeConfig.siteName %></span>
-                </p>
-
-                <p class="copyright-item">
-                    <span>Permalink:</span>
-                    <span><a href="<%- post.link  %>"><%- post.link %></a></span>
-                </p>
-
-                <p class="copyright-item">
-                    <span>License:</span>
-                    <span>MIT License</span>
-                </p>
-            </section>
-            <%}else{%>
-            <!--zh-->
-            <section class="post-copyright zh">
-                <p class="copyright-item ">
-                    <span>&#x4F5C;&#x8005;:</span>
-                    <span><%- themeConfig.siteName %></span>
-                </p>
-
-                <p class="copyright-item">
-                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
-                    <span><a href="<%- post.link  %>"><%- post.link %></a></span>
-                </p>
-
-                <p class="copyright-item">
-                    <span>&#x534F;&#x8BAE;:</span>
-                    <span>MIT License</span>
-                </p>
-            </section>
             <%}%>
-                                        <%}%>
-            <% if(site.customConfig.language==='en'){%>
-            <!--en-->
-            <section class="post-tags en">
-                <div>
-                    <span>Tag(s):</span>
-                    <span class="tag">
+                </span>
+                <!--en-->
+                <section class="post-tags en ">
+                    <div>
+                        <span>Tag(s):</span>
+                        <span class="tag ">
                         <% if(post.tags.length!==0){%>
                         <% post.tags.forEach(item=>{ %>
-                        <a href="<%- item.link %>"># <%- item.name %></a>
-                        <% }) %>
-                        <% } %>
-                    </span>
-                </div>
-                <div>
-                    <a href="javascript:window.history.back();">back</a>
-                    <span>&dot;</span>
-                    <a href="#">home</a>
-                </div>
-            </section>
-            <%}else{%>
-            <!--zh-->
-            <section class="post-tags zh">
-                <div>
-                    <span>&#x6807;&#x7B7E;:</span>
-                    <span class="tag">
+                        <a href="<%- item.link %>">#
+                                                <%- item.name %>
+                                                    </a>
+                                                    <% }) %>
+                                                        <% } %>
+                                                            </span>
+                    </div>
+                    <div>
+                        <a href="javascript:window.history.back();">back</a>
+                        <span>&dot;</span>
+                        <a href="#">home</a>
+                    </div>
+                </section>
+                <%}else{%>
+                    <!--Share-->
+                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=<%= post.link %>"><i class="fa fa-qrcode"></i></a>
+                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=<%= post.link %>&sharesource=qzone&title=<%= post.title %>&pics=https://blog.blinkstar.cn/images/avatar.png&summary=<%= post.abstract %>"><i class="fa fa-qq"></i></a>
+                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=<%= post.link %>&sharesource=weibo&title=<%= post.title%> + " - " + <%= post.abstract %>&pic="https://blog.blinkstar.cn/images/avatar.png "><i class="fa fa-weibo "></i></a>
+                    
+        </span>
+        <% if(site.customConfig.donate==='on'){%>
+            <div class="reward ">
+                <div class="reward-button ">&yen;
+                    <span class="reward-code "> 
+                        <span class="alipay-code "> <img class="alipay-img " alt = "support " src="<%=site.customConfig.donate_alipay%>"><b>支付宝</b> </span>
+                    <span class="wechat-code "> <img alt ="support " class="wechat-img " src="<%=site.customConfig.donate_wechat%>"><b>微信</b> </span> </span>
+    </div>
+    </div>
+    <%}%>
+        <!--zh-->
+        <section class="post-tags zh ">
+            <div>
+                <span>&#x6807;&#x7B7E;:</span>
+                <span class="tag ">
                         <% if(post.tags.length!==0){%>
                         <% post.tags.forEach(item=>{ %>
-                        <a href="<%- item.link %>"># <%- item.name %></a>
+                        <a href="<%- item.link %>">#
+                    <%- item.name %>
+                        </a>
                         <% }) %>
-                        <% } %>
-                    </span>
-                </div>
-                <div>
-                    <a href="javascript:window.history.back();">
+                            <% } %>
+                                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">
                         &#x8FD4;&#x56DE;</a>
-                    <span>&dot;</span>
-                    <a href="#">&#x4E3B;&#x9875;</a>
-                </div>
-            </section>
-            <%}%>
-                                                        <!---->
-                                                        <section class="post-nav">
-                                                            <% if (post.prevPost && !post.hideInList) { %>
-            <a class="prev" rel="prev" href="<%= post.prevPost.link %>">
-                <%= post.prevPost.title %>
-            </a>
-            <% } %>
-            <% if (post.nextPost && !post.hideInList) { %>
-            <a class="next" rel="next" href="<%= post.nextPost.link %>">
-                <%= post.nextPost.title %>
-            </a>
-            <% } %>
+                <span>&dot;</span>
+                <a href="#">&#x4E3B;&#x9875;</a>
+            </div>
+        </section>
+
+        <%}%>
+            <!---->
+            <section class="post-nav">
+                <% if (post.prevPost && !post.hideInList) { %>
+                    <a class="prev" rel="prev" href="<%= post.prevPost.link %>">
+                        <%= post.prevPost.title %>
+                    </a>
+                    <% } %>
+                        <% if (post.nextPost && !post.hideInList) { %>
+                            <a class="next" rel="next" href="<%= post.nextPost.link %>">
+                                <%= post.nextPost.title %>
+                            </a>
+                            <% } %>
             </section>
             </article>
-        </div>
-        <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
-        <% if (commentSetting.commentPlatform === 'gitalk') { %>
-        <%- include('./include/gitalk') %>
-        <% } %>
-        <% if (commentSetting.commentPlatform === 'disqus') { %>
-        <%- include('./include/disqus') %>
-        <% } %>
-        <% } %>
-    </div>
-    </div>
-    </div>
-    </div>
-    <%- include('./include/footer') %>
-    </div>
+            </div>
+            <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
+                <% if (commentSetting.commentPlatform === 'gitalk') { %>
+                    <%- include('./include/gitalk') %>
+                        <% } %>
+                            <% if (commentSetting.commentPlatform === 'disqus') { %>
+                                <%- include('./include/disqus') %>
+                                    <% } %>
+                                        <% } %>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            <%- include('./include/footer') %>
+                                                </div>
 </body>
 <script>
     scroll();
