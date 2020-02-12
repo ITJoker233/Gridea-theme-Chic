@@ -265,7 +265,35 @@
                 }
             ]
         },
-
+        {
+            "name": "siteFont",
+            "label": "网站字体",
+            "group": "主题设置",
+            "value": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif",
+            "type": "select",
+            "options": [{
+                    "label": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif",
+                    "value": "-apple-system,BlinkMacSystemFont,'Helvetica Neue','PingFang SC','Hiragino Sans GB','Droid Sans Fallback','Microsoft YaHei',sans-serif"
+                },
+                {
+                    "label": "Georgia, serif",
+                    "value": "Georgia, serif"
+                },
+                {
+                    "label": "Fira Code Medium",
+                    "value": "Fira Code Medium"
+                },
+                {
+                    "label": "Microsoft Yahei",
+                    "value": "Microsoft Yahei"
+                },
+                {
+                    "label": "monospace",
+                    "value": "monospace"
+                }
+            ],
+            "note": ""
+        },
         {
             "name": "ga",
             "label": "跟踪 ID",

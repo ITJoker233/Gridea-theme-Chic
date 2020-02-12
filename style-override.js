@@ -1,7 +1,7 @@
 const generateOverride = (params = {}) => {
     let result = ''
 
-    // 语言设置
+    // language
     if (params.language && params.language !== 'en') {
         result += `
         .en{
@@ -17,7 +17,14 @@ const generateOverride = (params = {}) => {
         #menu-toggle-zh {display:none;}
     `
     }
-
+    // website-font-family
+    if (params.siteFont) {
+        result += `
+      html {
+        font-family: ${params.siteFont};
+      }
+    `
+    }
     return result
 }
 

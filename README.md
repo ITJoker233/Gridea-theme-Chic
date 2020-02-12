@@ -70,7 +70,7 @@
 
 1. 下次更新未知....
 2. 本次更新时间为：2020.02.12
-3. 本次增加了文章分享的功能,文章打赏插件的功能,详情见[打赏插件使用教程](https://blog.itjoker.cn/post/)  (参考了[xiangyi715](https://github.com/xiangyi715/Gridea-Chic-Unique)的Gridea-Chic-Unique)
+3. 本次增加了文章分享的功能,文章打赏插件的功能,详情见[打赏插件使用教程](https://blog.itjoker.cn/post/S6t2Gj2aq)  (参考了[xiangyi715](https://github.com/xiangyi715/Gridea-Chic-Unique)的Gridea-Chic-Unique)
 4. 增加目录是否开启的开关。(因为考虑到兼容性,以及我自己太懒了.....所有增加这个开关，有需要的开启)
 5. 修复了移动端显示文章列表标题文字过长溢出的Bug。
 6. 增加了页面的点击特效...
@@ -89,6 +89,8 @@
 cd your-blog/themes
 git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
 # 更新方法
+git init #第一次更新时候用,后续不需要执行
+git remote add origin https://github.com/ITJoker233/Gridea-theme-Chic.git #第一次更新时候用,后续不需要执行
 git pull origin master
 ```
 
