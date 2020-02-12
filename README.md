@@ -1,22 +1,22 @@
 
 <h1 align="center"><a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank">Gridea-theme-Chic</a></h1>
-<p align="center">
-<img src="https://i.loli.net/2020/01/04/7J4ciEQjwsqK61X.png" alt="Chic theme">
-</p>
+
+<p align="center"><img src="https://i.loli.net/2020/01/04/7J4ciEQjwsqK61X.png" alt="Chic theme"></p>
 
 > Chic , 在法语中的意思是别致...
-<p align="center">
-<a alt="作者:Sirice，二次修改：ITJoker" href="https://github.com/ITJoker233/Gridea-theme-Chic">作者:Sirice，二次修改：ITJoker</a>
-</p>
+
+<p align="center"><a alt="作者:Sirice，二次修改：ITJoker" href="https://github.com/ITJoker233/Gridea-theme-Chic">作者:Sirice，二次修改：ITJoker</a></p>
 
 ## 🎈介绍
+
 优雅，功能强大，易于阅读的Gridea主题。
 
 ## 🌏示例
-- [示例站点](https://blog.itjoker.cn)
-- [我的博客](https://blog.itjoker.cn)
+
+- [示例站点 | 我的博客](https://blog.itjoker.cn)
 
 ## 💡特征
+
 - 适当的空白块，优雅但不简单。
 
 - 浅色/深色主题，只需单击一下。
