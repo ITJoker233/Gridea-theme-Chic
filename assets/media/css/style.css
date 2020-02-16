@@ -1077,8 +1077,8 @@ header label {
     position: fixed;
     top: 95px;
     right: 3rem;
-    width: 13em;
-    font-size: 0.75rem;
+    width: 8em;
+    font-size: 1.75rem;
 }
 
 .post-toc .tocbot-list {

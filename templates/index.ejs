@@ -3,11 +3,11 @@
 
 <head>
     <%- include('./include/head', { siteTitle: themeConfig.siteName }) %>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
-
         <%- include('./include/header') %>
             <div class="main">
                 <div class="container">
@@ -19,20 +19,42 @@
                             <%= site.customConfig.author%>
                         </div>
                         <div class="description">
-                            <%= site.customConfig.description%>
+                            <span id="subtitle">
+                                <%= site.customConfig.description%>
+                            </span>
                         </div>
                         <div class="links">
                             <% ['rss','twitter', 'facebook', 'github', 'linkedin', 'youtube','instagram','weibo','qq','send'].forEach((item) => { %>
                                 <% if (site.customConfig[item]) { %>
                                     <a class="link-item" href="<%= site.customConfig[item] %>" title="<%- item %>"><i class="fa fa-<%= item %>"></i></a>
                                     <% } %>
-                            <% }); %>
+                                        <% }); %>
                         </div>
                     </div>
                 </div>
             </div>
     </div>
+
 </body>
+<script>
+    // type 
+    var typed = new Typed("#subtitle", {
+        strings: ['<%= site.customConfig.description%>', '', ''],
+        startDelay: 10,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+    });
+    //head title
+    var titleTime;
+    document.addEventListener("visibilitychange", function() {
+        document.hidden ? (document.title = "😥" + OriginTitile, clearTimeout(titleTime)) : (document.title = "😝" + OriginTitile, titleTime = setTimeout(function() {
+            document.title = OriginTitile
+        }, 2E3))
+    });
+    var OriginTitile = document.title;
+</script>
 <%- include('./include/footer') %>
 
 </html>
