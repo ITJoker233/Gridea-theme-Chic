@@ -113,7 +113,7 @@ git pull origin master
 <summary> 当前版本 </summary>
 
 - [v1.7.0(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.0)
-
+- [v1.7.0(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
 </details>
 
 <details>
