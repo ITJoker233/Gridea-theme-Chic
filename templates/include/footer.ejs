@@ -34,7 +34,10 @@
                                                 var date = new Date();
                                                 document.write("" + date.getFullYear());
                                             </script>
-                                            | Powered by <a href=< %=s ite.customConfig.platform_link%>  target="_blank"><%= site.customConfig.platform_name%></a>
+                                            | Powered by
+                                            <a href="<%=site.customConfig.platform_link%>" target="_blank">
+                                                <%= site.customConfig.platform_name%>
+                                            </a>
             </div>
             <div id="update" style="display:none;">
                 <%= site.customConfig.update%>
