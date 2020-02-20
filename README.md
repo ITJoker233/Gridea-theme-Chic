@@ -13,7 +13,7 @@
 
 ## 🌏示例
 
-- [示例站点](https://blog.itjoker.cn)
+- [示例站点](https://0tkl1n.coding-pages.com)
 - [我的博客](https://blog.itjoker.cn)
 
 ## 💡特征
