@@ -58,7 +58,7 @@
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.7.0
+## 📌当前版本：1.7.1
 
 1. (刚开始使用这个主题的请忽略下面这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号.(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
@@ -73,17 +73,16 @@
 - 本次更新了以下内容:
 
 1. 下次更新未知....
-2. 本次更新时间为：2020.02.16
-3. 修复了音乐插件与目录显示的冲突...
-4. 增加了Description(描述)的打字特效...
-5. 增加了网页标题的特效...
-6. 修复了不能完全显示多级目录...
-7. 增加了主题字体自定义的功能...
+2. 本次更新时间为：2020.02.23
+3. 修复了一些Bug
+4. 优化了代码结构，理论上更好的支持IE?
+5. 改版检验主题版本号的方法
+6. 该版本可能为最终版，更新时间未知。作者没钱，更新没动力了😭主要没工作....
 
 ## 📢作者留言
 
 - <font color='red'>在线卑微求工作,有没有大佬带带我😭。Web 前端 / 单片机 / 嵌入式的都行啊</font>
-- 年底期间可能更新较慢或者不更新，如有Bug之类或者需求，请在[我的博客](https://blog.itjoker.cn/post/about/)留言或者提交Issue :)
+- 如有Bug之类或者需求，请在[我的博客](https://blog.itjoker.cn/post/about/)留言或者提交Issue :)
 - 后续可能会出现大版本的更新,请及时更新主题，否则将有可能出现样式异常的可能...
 - 最近秃头严重....不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了
 
@@ -94,7 +93,6 @@
 cd your-blog/themes
 git clone https://github.com/ITJoker233/Gridea-theme-Chic.git Chic
 # 更新方法
-
 git pull origin master
 ```
 
@@ -114,14 +112,15 @@ git pull origin master
 
 <summary> 当前版本 </summary>
 
-- [v1.7.0(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.0)
-- [v1.7.0(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
+- [v1.7.1(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.1)
+- [v1.7.1(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
 </details>
 
 <details>
 
 <summary> 历史版本 </summary>
 
+- [v1.7.0](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.0)
 - [v1.6.9](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.9)
 - [v1.6.8](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.8)
 - [v1.6.7](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.7)

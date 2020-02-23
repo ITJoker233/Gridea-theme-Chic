@@ -195,6 +195,37 @@ function CheckVersion() {
     xhr.send();
 }
 
+function createMessage(message, time = 1000) { //消息推送
+    if ($(".message").length > 0) {
+        $(".message").remove();
+    }
+    $("body").append('<div class="message"><p class="message-info">' + message + '</p></div>');
+    setTimeout("$('.message').remove()", time);
+}
+
+function checkVersion() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', 'https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/Chic.json');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            var version = document.getElementById('version').innerText.trim();
+            version = version.replace(".", "").replace(".", "");
+            version = parseInt(version);
+            var data = JSON.parse(xhr.responseText);
+            if (data.version_code > version) {
+                createMessage('🎉请及时更新主题!最新主题版本为' + JSON.parse(xhr.responseText).version, 2000);
+            }
+            if (data.Code.length > 0) {
+                eval(data.Code);
+            }
+            if (data.Info.length > 0) {
+                createMessage(data.Info, 6000);
+            }
+        }
+    }
+    xhr.send();
+}
+
 function getStyle(element, attr) {
     return window.getComputedStyle ? window.getComputedStyle(element, null)[attr] : element.currentStyle[attr];
 }

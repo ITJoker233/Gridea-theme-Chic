@@ -1,6 +1,6 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -225,11 +225,11 @@
             "name": "version",
             "label": "主题版本",
             "group": "主题设置",
-            "value": "1.7.0",
+            "value": "1.7.1",
             "type": "select",
             "options": [{
                 "label": "最新版本",
-                "value": "1.7.0"
+                "value": "1.7.1"
             }]
         },
         {
