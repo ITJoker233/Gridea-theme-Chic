@@ -64,7 +64,7 @@
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.7.1
+## 📌当前版本：1.7.2
 
 1. (刚开始使用这个主题的请忽略下面这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号.(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
@@ -79,11 +79,10 @@
 - 本次更新了以下内容:
 
 1. 下次更新未知....
-2. 本次更新时间为：2020.02.23
-3. 修复了一些Bug
-4. 优化了代码结构，理论上更好的支持IE?
-5. 改版检验主题版本号的方法
-6. 该版本可能为最终版，更新时间未知。作者没钱，更新没动力了😭主要没工作....
+2. 本次更新时间为：2020.03.01
+3. 修复了一些标题前显示带有#,虽然我不建议,但是别人建议,那就删去了...(CDN更新缓慢...还有就是这样的确好看 XD)
+4. 改变了代码高亮的样式,相对更好看?
+5. 该版本可能为最终版，更新时间未知。作者没钱，更新没动力了😭主要没工作....
 
 ## 📢作者留言
 
@@ -118,14 +117,15 @@ git pull origin master
 
 <summary> 当前版本 </summary>
 
-- [v1.7.1(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.1)
-- [v1.7.1(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
+- [v1.7.2(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.2)
+- [v1.7.2(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
 </details>
 
 <details>
 
 <summary> 历史版本 </summary>
 
+- [v1.7.1](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.1)
 - [v1.7.0](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.0)
 - [v1.6.9](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.9)
 - [v1.6.8](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.8)

@@ -728,7 +728,7 @@ header label {
 }
 
 .post-content h1::before {
-    content: "#";
+    content: "";
     margin-right: 5px;
     color: #2d96bd;
 }
@@ -738,7 +738,7 @@ header label {
 }
 
 .post-content h2::before {
-    content: "#";
+    content: "";
     margin-right: 5px;
     color: #2d96bd;
 }
