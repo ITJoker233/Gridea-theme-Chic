@@ -7,6 +7,12 @@
 
 <p align="center"><a alt="作者:Sirice，二次修改：ITJoker" href="https://github.com/ITJoker233/Gridea-theme-Chic">作者:Sirice，二次修改：ITJoker</a></p>
 
+[![GitHub release](https://img.shields.io/github/v/release/ITJoker233/Gridea-theme-Chic.svg?style=flat-square&logo=github)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/latest)
+
+[![Github commits](https://img.shields.io/github/commits-since/ITJoker233/Gridea-theme-Chic/latest/master.svg?style=flat-square&logo=git&color=important)](https://github.com/ITJoker233/Gridea-theme-Chic/commits/master)
+
+[![](https://data.jsdelivr.com/v1/package/gh/ITJoker233/Gridea-theme-Chic/badge)](https://www.jsdelivr.com/package/gh/ITJoker233/Gridea-theme-Chic)
+
 ## 🎈介绍
 
 优雅，功能强大，易于阅读的Gridea主题。
