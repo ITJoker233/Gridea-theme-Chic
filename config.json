@@ -1,6 +1,6 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.7.2",
+    "version": "1.7.3",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -225,11 +225,11 @@
             "name": "version",
             "label": "主题版本",
             "group": "主题设置",
-            "value": "1.7.2",
+            "value": "1.7.3",
             "type": "select",
             "options": [{
                 "label": "最新版本",
-                "value": "1.7.2"
+                "value": "1.7.3"
             }]
         },
         {
@@ -526,6 +526,103 @@
                     "value": "off"
                 }
             ]
+        },
+        {
+            "name": "Valine",
+            "label": "是否开启",
+            "group": "Valine 评论",
+            "value": "off",
+            "type": "select",
+            "options": [{
+                    "label": "开",
+                    "value": "on"
+                },
+                {
+                    "label": "关",
+                    "value": "off"
+                }
+            ],
+            "note": "设置文档： https://valine.js.org/"
+        },
+        {
+            "name": "valineAppId",
+            "label": "App ID",
+            "group": "Valine 评论",
+            "value": "",
+            "type": "input",
+            "note": "从 LeanCloud 的应用中得到的 appId"
+        },
+        {
+            "name": "valineAppKey",
+            "label": "App Key",
+            "group": "Valine 评论",
+            "value": "",
+            "type": "input",
+            "note": "从 LeanCloud 的应用中得到的 APP Key"
+        },
+        {
+            "name": "valineNotify",
+            "label": "Notify",
+            "group": "Valine 评论",
+            "value": false,
+            "type": "switch",
+            "note": "评论回复邮件提醒"
+        },
+        {
+            "name": "valineVerify",
+            "label": "Verify",
+            "group": "Valine 评论",
+            "value": true,
+            "type": "switch",
+            "note": "验证码服务"
+        },
+        {
+            "name": "valineAvatar",
+            "label": "Avatar",
+            "group": "Valine 评论",
+            "value": "mp",
+            "type": "input",
+            "note": "Gravatar 头像展示方式"
+        },
+        {
+            "name": "valinePageSize",
+            "label": "Page Size",
+            "group": "Valine 评论",
+            "value": 10,
+            "type": "input",
+            "note": "评论列表分页，每页条数"
+        },
+        {
+            "name": "valineVisitor",
+            "label": "Visitor",
+            "group": "Valine 评论",
+            "value": false,
+            "type": "switch",
+            "note": "文章访问量统计"
+        },
+        {
+            "name": "valineHighlight",
+            "label": "Highlight",
+            "group": "Valine 评论",
+            "value": false,
+            "type": "switch",
+            "note": "代码高亮，默认开启，若不需要，请手动关闭"
+        },
+        {
+            "name": "valineRecordIp",
+            "label": "Record IP",
+            "group": "Valine 评论",
+            "value": false,
+            "type": "switch",
+            "note": "是否记录评论者IP"
+        },
+        {
+            "name": "valinePlaceholder",
+            "label": "Placeholder",
+            "group": "Valine 评论",
+            "value": "来都来了，不妨评论一下",
+            "type": "input",
+            "note": "评论框占位提示符"
         },
         {
             "name": "support_author",

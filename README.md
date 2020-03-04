@@ -58,13 +58,14 @@
 - [x] 增加鼠标点击特效
 - [x] 增加网页标题的特效
 - [x] 增加主题字体自定义的功能
+- [x] 增加了Valine评论的功能
 - [ ] 增加文章加密解密功能? ヾ(•ω•`)o (待定) (本功能需要客户端支持)
 - [ ] 增加关于我的页面? ヾ(•ω•`)o (待定)
 - [ ] 增加节日插件? ヾ(•ω•`)o (待定)
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.7.2
+## 📌当前版本：1.7.3
 
 1. (刚开始使用这个主题的请忽略下面这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号.(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
@@ -79,9 +80,9 @@
 - 本次更新了以下内容:
 
 1. 下次更新未知....
-2. 本次更新时间为：2020.03.01
-3. 修复了一些标题前显示带有#,虽然我不建议,但是别人建议,那就删去了...(CDN更新缓慢...还有就是这样的确好看 XD)
-4. 改变了代码高亮的样式,相对更好看?
+2. 本次更新时间为：2020.03.04
+3. 修复了一些bug?(CDN更新后体现)
+4. 支持了valine评论的功能?(测试功能,有问题issue提交下)
 5. 该版本可能为最终版，更新时间未知。作者没钱，更新没动力了😭主要没工作....
 
 ## 📢作者留言
@@ -117,14 +118,16 @@ git pull origin master
 
 <summary> 当前版本 </summary>
 
-- [v1.7.2(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.2)
-- [v1.7.2(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
+- [v1.7.3(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.3)
+- [v1.7.3(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
+
 </details>
 
 <details>
 
 <summary> 历史版本 </summary>
 
+- [v1.7.2](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.2)
 - [v1.7.1](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.1)
 - [v1.7.0](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.0)
 - [v1.6.9](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.6.9)

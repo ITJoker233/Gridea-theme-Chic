@@ -211,11 +211,14 @@
                 <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
                     <% if (commentSetting.commentPlatform === 'gitalk') { %>
                         <%- include('./include/gitalk') %>
-                            <% } %>
-                                <% if (commentSetting.commentPlatform === 'disqus') { %>
-                                    <%- include('./include/disqus') %>
-                                        <% } %>
-                                            <% } %>
+                            <% } else if (commentSetting.commentPlatform === 'disqus') { %>
+                                <%- include('./include/disqus') %>
+                                    <% } %>
+                                        <% if (site.customConfig.Valine) { %>
+                                            <%- include('./include/valine') %>
+                                                <% } %>
+                                                    <% } %>
+
             </div>
     </div>
     </div>
