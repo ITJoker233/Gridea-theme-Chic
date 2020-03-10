@@ -45,11 +45,13 @@
             <% if (typeof commentSetting !== 'undefined' && commentSetting.showComment) { %>
                 <% if (commentSetting.commentPlatform === 'gitalk') { %>
                     <%- include('./include/gitalk') %>
-                        <% } %>
-                            <% if (commentSetting.commentPlatform === 'disqus') { %>
-                                <%- include('./include/disqus') %>
+                        <% } else if (commentSetting.commentPlatform === 'disqus') { %>
+                            <%- include('./include/disqus') %>
+                                <% } %>
                                     <% } %>
-                                        <% } %>
+                                        <% if (site.customConfig.Valine==='on') { %>
+                                            <%- include('./include/valine') %>
+                                                <% } %>
     </div>
     <%- include('./include/footer') %>
 </body>

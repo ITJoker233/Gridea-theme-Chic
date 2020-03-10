@@ -214,11 +214,10 @@
                             <% } else if (commentSetting.commentPlatform === 'disqus') { %>
                                 <%- include('./include/disqus') %>
                                     <% } %>
-                                        <% if (site.customConfig.Valine) { %>
-                                            <%- include('./include/valine') %>
-                                                <% } %>
+                                        <% } %>
+                                            <% if (site.customConfig.Valine==='on') { %>
+                                                <%- include('./include/valine') %>
                                                     <% } %>
-
             </div>
     </div>
     </div>
