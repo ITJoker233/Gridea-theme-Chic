@@ -43,8 +43,10 @@ function hitokoto() {
 function scroll() {
     /* scroll */
     let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+    let markdownIt = document.querySelectorAll('.markdownIt-TOC')
     window.addEventListener("scroll", event => {
         let fromTop = window.scrollY;
+        markdownIt[0].scrollTop = fromTop / 10
 
         mainNavLinks.forEach((link, index) => {
             let section = document.getElementById(decodeURI(link.hash).substring(1));
