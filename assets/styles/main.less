@@ -592,6 +592,9 @@
     padding: 1px 0px 0px 0px;
     line-height: 1.2em;
     letter-spacing: 0.05em;
+    height: calc(100vh - 128px);
+    padding-bottom:80px;
+    overflow-y: auto;
 
     &:before {
       content: "";
@@ -603,10 +606,14 @@
       background-color: #ebedef;
       opacity: .5;
     }
+    >li:last-child{
+      padding-bottom:200px;
+    }
   }
 
   ul {
     list-style: none;
+    margin-left: -2.5em;
   }
 
   li {
