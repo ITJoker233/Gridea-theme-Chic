@@ -66,6 +66,9 @@
                                     </div>
                                     <%}%>
                         </header>
+                        <% if (themeConfig.showFeatureImage && post.feature) { %>
+                            <img class="post-feature-image" src="<%= post.feature %>" alt="">
+                          <% } %>
                         <div class="post-content">
                             <%- post.content %>
                         </div>
