@@ -513,8 +513,6 @@ header label {
 }
 
 .intro .avatar img {
-    width: 128px;
-    height: auto;
     display: inline-block;
     -webkit-border-radius: 100%;
     border-radius: 100%;

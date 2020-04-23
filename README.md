@@ -9,13 +9,15 @@
 
 [![GitHub release](https://img.shields.io/github/v/release/ITJoker233/Gridea-theme-Chic.svg?style=flat-square&logo=github)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/latest)
 
-[![Github commits](https://img.shields.io/github/commits-since/ITJoker233/Gridea-theme-Chic/latest/master.svg?style=flat-square&logo=git&color=important)](https://github.com/ITJoker233/Gridea-theme-Chic/commits/master)
-
 [![](https://data.jsdelivr.com/v1/package/gh/ITJoker233/Gridea-theme-Chic/badge)](https://www.jsdelivr.com/package/gh/ITJoker233/Gridea-theme-Chic)
+
+[![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](//blog.itjoker.cn/donate)  
 
 ## 🎈介绍
 
 优雅，功能强大，易于阅读的Gridea主题。
+
+## 抽个奖？ 详情见[issue](https://github.com/ITJoker233/Gridea-theme-Chic/issues/19)
 
 ## 🌏示例
 
@@ -62,10 +64,11 @@
 - [ ] 增加文章加密解密功能? ヾ(•ω•`)o (待定) (本功能需要客户端支持)
 - [ ] 增加关于我的页面? ヾ(•ω•`)o (待定)
 - [ ] 增加节日插件? ヾ(•ω•`)o (待定)
+- [ ] 支持手机端的暗黑模式？ヾ(•ω•`)o (2020.04.23) 
 - [ ] 增加相关的Web特效~
 - More...
 
-## 📌当前版本：1.7.3
+## 📌当前版本：1.7.4
 
 1. (刚开始使用这个主题的请忽略下面这句话)
 2. 由于Gridea客户端不支持直接获取主题版本，所以换了一个方法获取当前主题的版本号.(如果Gridea的客户端一直不支持获取的话，那么就采用这个方法，如果支持了就不必这一步。)
@@ -80,10 +83,10 @@
 - 本次更新了以下内容:
 
 1. 下次更新未知....
-2. 本次更新时间为：2020.03.04
-3. 修复了一些bug?(CDN更新后体现)
-4. 支持了valine评论的功能?(测试功能,有问题issue提交下)
-5. 该版本可能为最终版，更新时间未知。作者没钱，更新没动力了😭主要没工作....
+2. 本次更新时间为：2020.04.23
+3. 修复了一Valine的一些问题
+4. 增加了文章顶部的feature图片的显示
+5. 修复了主页头像的显示bug...
 
 ## 📢作者留言
 
@@ -91,6 +94,8 @@
 - 如有Bug之类或者需求，请在[我的博客](https://blog.itjoker.cn/post/about/)留言或者提交Issue :)
 - 后续可能会出现大版本的更新,请及时更新主题，否则将有可能出现样式异常的可能...
 - 最近秃头严重....不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了不熬夜了
+
+> 推荐使用git clone的方法获取主题，这样能方便更新...
 
 ## 🔧使用方法
 
@@ -109,6 +114,7 @@ git pull origin master
 - PS:只有提交有效的代码,没太大纰漏问题的都会出现在这
 
 1. [@ciwomuli](https://github.com/ciwomuli)
+2. [@YueqingSheng](https://github.com/YueqingSheng)
 
 - 如果上述方法网络不给力,或者没梯子....可以试试下面来下载
 
@@ -118,8 +124,8 @@ git pull origin master
 
 <summary> 当前版本 </summary>
 
-- [v1.7.3(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.3)
-- [v1.7.3(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
+- [v1.7.4(当前版本)](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.4)
+- [v1.7.4(当前版本-CDN)](http://cdn.uzz5.com/Chic/Chic.zip)(由Q名为[何凄寥](3846***)的老板倾情赞助)
 
 </details>
 
@@ -127,6 +133,7 @@ git pull origin master
 
 <summary> 历史版本 </summary>
 
+- [v1.7.3](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.3)
 - [v1.7.2](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.2)
 - [v1.7.1](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.1)
 - [v1.7.0](https://github.com/ITJoker233/Gridea-theme-Chic/releases/tag/1.7.0)
