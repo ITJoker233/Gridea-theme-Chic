@@ -11,7 +11,7 @@
 
 [![](https://data.jsdelivr.com/v1/package/gh/ITJoker233/Gridea-theme-Chic/badge)](https://www.jsdelivr.com/package/gh/ITJoker233/Gridea-theme-Chic)
 
-[![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](//blog.itjoker.cn/donate)  
+[![donate (赞助)](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](//blog.itjoker.cn/donate)  
 
 ## 🎈介绍
 
