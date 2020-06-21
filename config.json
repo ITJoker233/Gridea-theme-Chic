@@ -307,20 +307,19 @@
             "note": "不设置为默认的jsdeliver,例如：https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic"
         },
         {
-            "name": "ga",
-            "label": "跟踪 ID",
-            "group": "谷歌统计",
-            "value": "",
-            "type": "input",
-            "note": "UA-xxxxxxxxx-x"
-        },
-        {
             "name": "bs",
             "label": "跟踪 ID",
             "group": "百度统计",
             "value": "",
             "type": "input",
             "note": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        },{
+            "name": "ga",
+            "label": "跟踪 ID",
+            "group": "谷歌统计",
+            "value": "",
+            "type": "input",
+            "note": "UA-xxxxxxxxx-x"
         },
         {
             "name": "baidu",
