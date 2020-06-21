@@ -315,6 +315,14 @@
             "note": "UA-xxxxxxxxx-x"
         },
         {
+            "name": "bs",
+            "label": "跟踪 ID",
+            "group": "百度统计",
+            "value": "",
+            "type": "input",
+            "note": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        },
+        {
             "name": "baidu",
             "label": "百度自动提交",
             "group": "百度自动提交",
