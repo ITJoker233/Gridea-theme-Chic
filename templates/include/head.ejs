@@ -56,19 +56,6 @@
                                 <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
                                 <script>
                                     window.dataLayer = window.dataLayer || [];
-
-                                    function gtag() {
-                                        dataLayer.push(arguments);
-                                    }
-                                    gtag('js', new Date());
-                                    gtag('config', '<%= site.customConfig.ga %>');
-                                </script>
-                                <% } %>
-                            <% } if (site.customConfig.ga) { %>
-                                <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
-                                <script>
-                                    window.dataLayer = window.dataLayer || [];
-
                                     function gtag() {
                                         dataLayer.push(arguments);
                                     }
@@ -86,4 +73,4 @@
                                     s.parentNode.insertBefore(hm, s);
                                   })();
                                 </script>
-                                <% } %>                               
+                                <% } %> 
