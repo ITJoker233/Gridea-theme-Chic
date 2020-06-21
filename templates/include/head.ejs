@@ -56,7 +56,6 @@
                                 <script async src="https://www.googletagmanager.com/gtag/js?id=<%= site.customConfig.ga %>"></script>
                                 <script>
                                     window.dataLayer = window.dataLayer || [];
-
                                     function gtag() {
                                         dataLayer.push(arguments);
                                     }
@@ -64,3 +63,14 @@
                                     gtag('config', '<%= site.customConfig.ga %>');
                                 </script>
                                 <% } %>
+                            <% } if (site.customConfig.bs) { %>
+                                <script type="text/javascript">
+                                  var _hmt = _hmt || [];
+                                  (function () {
+                                    var hm = document.createElement("script");
+                                    hm.src = "https://hm.baidu.com/hm.js?<%= site.customConfig.bs %>";
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(hm, s);
+                                  })();
+                                </script>
+                                <% } %> 

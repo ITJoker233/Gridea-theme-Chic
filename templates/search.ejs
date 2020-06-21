@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('./include/head', { siteTitle: themeConfig.siteName }) %>
+    <%- include('./include/head.ejs', { siteTitle: themeConfig.siteName }) %>
     <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/fuse.js"></script>
     <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/ejs.min.js"></script>
     <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/gridea-search.min.js"></script>
@@ -35,7 +35,7 @@
         }
     </style>
     <div class="main_">
-        <%- include('./include/header') %>
+        <%- include('./include/header.ejs') %>
             <div class="result-box">
                 <div id="gridea-search-result">
                     <p class="searching">搜索中......</p>
