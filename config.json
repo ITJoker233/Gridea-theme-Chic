@@ -222,6 +222,14 @@
             "note": "请输入平台的链接"
         },
         {
+            "label": "Backgroundimage",
+			"group": "主题设置",
+            "name": "Backgroundimage",
+            "type": "input",
+            "value": "",
+            "note": "背景图地址"
+        },
+        {
             "name": "version",
             "label": "主题版本",
             "group": "主题设置",
