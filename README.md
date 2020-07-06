@@ -78,7 +78,7 @@
 6. 打赏插件------[打赏插件使用教程](https://blog.itjoker.cn/post/S6t2Gj2aq)
 7. 友链界面------在菜单里面添加的link为:```/friends```
 8. CDN设置------需要把主题目录中的整个assets上传到CDN存储的地方。使用方法：例如你获取到的CDN外链地址为:```https://cdn.example.cn/assets/media/script/xxx.min.js```,则只需填写```https://cdn.example.cn```
-9.<font color='red'> *如果老版本是pull同步的，建议在自定义配置中，重新保存一下，避免更新后出错*</font>
+9. <font color='red'> *如果老版本是pull同步的，建议在自定义配置中，重新保存一下，避免更新后出错*</font>
 
 ## 🔖本次更新日志
 
