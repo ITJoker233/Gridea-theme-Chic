@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <%- include('./include/head.ejs', { siteTitle: themeConfig.siteName }) %>
-    <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/fuse.js"></script>
-    <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/ejs.min.js"></script>
-    <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/gridea-search.min.js"></script>
-    <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/example/assets/media/gridea-search/result-template.ejs" type="text/ejs"></script>
-    <style>
+    <%- include('./include/head', { siteTitle: themeConfig.siteName }) %>
+        <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/fuse.js"></script>
+        <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/ejs.min.js"></script>
+        <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/lib/gridea-search.min.js"></script>
+        <script src="//cdn.jsdelivr.net/gh/tangkaichuan/gridea-search/example/assets/media/gridea-search/result-template.ejs" type="text/ejs"></script>
+        <style>
             .main_ {
                 display: flex;
                 flex-direction: column;
@@ -35,7 +35,7 @@
         }
     </style>
     <div class="main_">
-        <%- include('./include/header.ejs') %>
+        <%- include('./include/header') %>
             <div class="result-box">
                 <div id="gridea-search-result">
                     <p class="searching">搜索中......</p>
@@ -45,5 +45,3 @@
     </div>
 </body>
 <%- include('./include/footer') %>
-
-</html>

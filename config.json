@@ -223,7 +223,7 @@
         },
         {
             "label": "Backgroundimage",
-			"group": "主题设置",
+            "group": "主题设置",
             "name": "Backgroundimage",
             "type": "input",
             "value": "",
@@ -310,7 +310,7 @@
             "name": "cdnSetting",
             "label": "CDN设置",
             "group": "主题设置",
-            "value": "",
+            "value": "https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic",
             "type": "input",
             "note": "不设置为默认的jsdeliver,例如：https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic"
         },
@@ -321,7 +321,7 @@
             "value": "",
             "type": "input",
             "note": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-        },{
+        }, {
             "name": "ga",
             "label": "跟踪 ID",
             "group": "谷歌统计",
