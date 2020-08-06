@@ -19,6 +19,8 @@
 
 ## 抽个奖？ 详情见[issue](https://github.com/ITJoker233/Gridea-theme-Chic/issues/19)
 
+## <font color='red'>qq交流群：499093465</font>
+
 ## 🌏示例
 
 - [示例站点](https://0tkl1n.coding-pages.com)
