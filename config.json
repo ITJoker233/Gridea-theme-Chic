@@ -214,20 +214,12 @@
             "note": "请输入平台的名称"
         },
         {
-            "name": "platform_link",
+            "name": "platformLink",
             "label": "Powered By 链接",
             "group": "主题设置",
             "value": "https://coding.net",
             "type": "input",
             "note": "请输入平台的链接"
-        },
-        {
-            "label": "Backgroundimage",
-            "group": "主题设置",
-            "name": "Backgroundimage",
-            "type": "input",
-            "value": "",
-            "note": "背景图地址"
         },
         {
             "name": "version",
@@ -305,6 +297,14 @@
                 }
             ],
             "note": ""
+        },
+        {
+            "name": "prismSetting",
+            "label": "代码高亮设置(prism.css)",
+            "group": "主题设置",
+            "value": "https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css",
+            "type": "input",
+            "note": "默认 https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.cssic"
         },
         {
             "name": "cdnSetting",
