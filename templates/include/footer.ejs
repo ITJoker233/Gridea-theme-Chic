@@ -3,7 +3,7 @@
     <% } %>
         <footer id="footer" class="footer">
             <div class="copyright">
-                <% if (site.customConfig.support_author == "on") { %>
+                <% if (site.customConfig.supportAuthor == "on") { %>
                     <div class="Like">
                         <div class="tip" data-tooltip="Do you like it?">
                             <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
@@ -48,11 +48,11 @@
                 </div>
                 <%}%>
                     <script>
-                        var pat = '';
-                        <% if (site.customConfig.live2ddebug == "on") { %>
-                        pat = ':4000';
+                        var port = '';
+                        <% if (site.customConfig.live2dDebug == "on") { %>
+                        port = ':4000';
                         <%}%>
-                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
                     </script>
         </footer>
         <% if (site.customConfig.live2d == "on") { %>
@@ -62,32 +62,32 @@
                     <% if (site.customConfig.music == "on") { %>
 
                     function LoadPlayer() {
-                        var music_array = [];
-                        <%site.customConfig.musics.forEach(function(music_item) { %>
-                        music_array.push({
-                            name: '<%=music_item.name%>',
-                            url: '<%=music_item.url%>',
-                            artist: '<%=music_item.author%>',
-                            cover: '<%=music_item.pic%>',
+                        var musicList = [];
+                        <%site.customConfig.musics.forEach(function(music) { %>
+                        musicList.push({
+                            name: '<%=music.name%>',
+                            url: '<%=music.url%>',
+                            artist: '<%=music.author%>',
+                            cover: '<%=music.pic%>',
                         });
                         <%}); %>
-                        console.log(" MusicList: " + music_array);
-                        <% if (site.customConfig.music_model == "fixed") { %>
+                        console.log(" MusicList: " + musicList);
+                        <% if (site.customConfig.musicModel == "fixed") { %>
                         const ap = new APlayer({
                             container: document.getElementById('player'),
                             fixed: true,
-                            audio: music_array
+                            audio: musicList
                         });
-                        <% } else if(site.customConfig.music_model == "mini"){%>
+                        <% } else if(site.customConfig.musicModel == "mini"){%>
                         const ap = new APlayer({
                             container: document.getElementById('player'),
                             mini: true,
-                            audio: music_array
+                            audio: musicList
                         });
                         <%}else{%>
                         const ap = new APlayer({
                             container: document.getElementById('player'),
-                            audio: music_array
+                            audio: musicList
                         });
                         <%}%>
                     }
@@ -113,46 +113,3 @@
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
-                <% if (site.customConfig.weather == "on") { %>
-                    <div id="tp-weather-widget" style="background: #666;display: flex;"></div>
-                    <script>
-                        (function(T, h, i, n, k, P, a, g, e) {
-                            g = function() {
-                                P = h.createElement(i);
-                                a = h.getElementsByTagName(i)[0];
-                                P.src = k;
-                                P.charset = "utf-8";
-                                P.async = 1;
-                                a.parentNode.insertBefore(P, a);
-                            };
-                            T["ThinkPageWeatherWidgetObject"] = n;
-                            T[n] || (T[n] = function() {
-                                (T[n].q = T[n].q || []).push(arguments)
-                            });
-                            T[n].l = +new Date();
-                            if (T.attachEvent) {
-                                T.attachEvent("onload", g)
-                            } else {
-                                T.addEventListener("load", g, false)
-                            }
-                        }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
-
-                        var wearther_margin = "10px 10px";
-                        <% if (site.customConfig.music == "on") { %>
-                        wearther_margin = "70px 5px";
-                        <%}%>
-                        tpwidget("init", {
-                            "flavor": "bubble",
-                            "location": "WX4FBXXFKE4F",
-                            "geolocation": "enabled",
-                            "position": "bottom-left",
-                            "margin": wearther_margin,
-                            "language": "zh-chs",
-                            "unit": "c",
-                            "theme": "chameleon",
-                            "uid": "UFC977E1C7",
-                            "hash": "213ad798bc472dc365da3a9d4a9ff115"
-                        });
-                        tpwidget("show");
-                    </script>
-                    <% } %>

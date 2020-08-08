@@ -1,6 +1,6 @@
 {
     "name": "Chic-给我的主题来个Star呗!🎉",
-    "version": "1.7.5",
+    "version": "1.7.6",
     "author": "@ITJoker (原作者：@Bentham)",
     "repository": "https://github.com/ITJoker233/Gridea-theme-Chic",
     "customConfig": [{
@@ -233,11 +233,11 @@
             "name": "version",
             "label": "主题版本",
             "group": "主题设置",
-            "value": "1.7.5",
+            "value": "1.7.6",
             "type": "select",
             "options": [{
                 "label": "最新版本",
-                "value": "1.7.5"
+                "value": "1.7.6"
             }]
         },
         {
@@ -378,7 +378,7 @@
             ]
         },
         {
-            "name": "live2ddebug",
+            "name": "live2dDebug",
             "label": "Live2D是否本地预览(同步时请关闭)",
             "group": "插件中心",
             "value": "off",
@@ -395,7 +395,7 @@
         },
         {
             "name": "live2d",
-            "label": "Live2d开启状态",
+            "label": "Live2d状态",
             "group": "插件中心",
             "value": "on",
             "type": "select",
@@ -490,7 +490,7 @@
             ]
         },
         {
-            "name": "music_model",
+            "name": "musicModel",
             "label": "吸底 / Mini / 普通 模式(建议吸底模式...其他的待测试)",
             "group": "Music插件",
             "value": "fixed",
@@ -632,7 +632,7 @@
             "note": "评论框占位提示符"
         },
         {
-            "name": "support_author",
+            "name": "supportAuthor",
             "label": "🎉支持作者",
             "group": "🎉支持作者",
             "value": "on",
