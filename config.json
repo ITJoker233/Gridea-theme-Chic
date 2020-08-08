@@ -206,7 +206,7 @@
             "note": ""
         },
         {
-            "name": "platform_name",
+            "name": "platformName",
             "label": "Powered By 名称",
             "group": "主题设置",
             "value": "Coding.net",
