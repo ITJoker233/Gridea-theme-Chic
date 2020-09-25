@@ -169,28 +169,25 @@ function getStar() {
 
 function CheckVersion() {
     var xhr = new XMLHttpRequest();
-    xhr.open('get', 'https://api.github.com/repos/ITJoker233/Gridea-theme-Chic/releases/latest');
+    //xhr.open('get', 'https://api.github.com/repos/ITJoker233/Gridea-theme-Chic/releases/latest');
+    jsdelivr_url = 'https://data.jsdelivr.com/v1/package/gh/ITJoker233/Gridea-theme-Chic';
+    xhr.open('get', jsdelivr_url);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             var data = JSON.parse(xhr.responseText);
             var version = document.getElementById('version').innerText.trim();
             var update = document.getElementById('update').innerText.trim();
             var hitokoto = document.getElementById('hitokoto');
-            var patt = new RegExp("重要更新");
             if (update == "on") {
                 if (version == "") {
                     hitokoto.innerText = "因为新版本特性,请重新点击下主题->自定义配置->保存 或参考最新的README.md";
                 }
-                if (data.tag_name != version) {
+                if (data.versions[0] != version) {
                     console.log("🎉 Current Theme Version: " + version);
-                    hitokoto.innerText = "请及时更新当前版本：" + version + " 最新版本为：" + data.tag_name;
+                    hitokoto.innerText = "请及时更新当前版本：" + version + " 最新版本为：" + data.versions[0];
                     console.log("🎉 更新内容: " + data.body);
                 } else
-                    console.log("\n %c 🎉 Current Theme Version: " + version + " Latest Version: " + data.tag_name + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
-            } else if ((update == "off") && patt.test(data.body)) {
-                console.log("🎉 Current Theme Version: " + version);
-                hitokoto.innerText = "有重要更新,请及时更新当前版本：" + version + " 最新版本为：" + data.tag_name;
-                console.log("🎉 更新内容: " + data.body);
+                    console.log("\n %c 🎉 Current Theme Version: " + version + " Latest Version: " + data.versions[0] + "\n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
             }
         }
     }
