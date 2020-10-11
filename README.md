@@ -13,6 +13,8 @@
 
 [![donate (赞助)](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](//blog.itjoker.cn/donate)  
 
+# 近期准备更新,手头的事情搞定,能清除issue就清除~ 学业繁重~
+
 ## 🎈介绍
 
 优雅，功能强大，易于阅读的Gridea主题。
